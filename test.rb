@@ -48,7 +48,7 @@ ERR_FILE = 'test_errors.log'
 require 'open3'
 
 # Initial notification
-version = 'CS 352 Project Test Script [v1.0] - Jon Egeland, 2015'
+version = 'CS 352 Project Test Script [v0.9] - Jon Egeland, 2015'
 puts version
 puts "\nSetup:"
 puts "------"
