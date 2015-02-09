@@ -92,10 +92,10 @@ Dir.glob(TEST_DIR).each do |t|
     log.write("#{name}:\n#{output}\n\n") if failed
 
     # Determine whether or not it passed
-    result = failed == should_fail ? 'passed' : 'failed'
+    result = failed == should_fail ? 'passed' : 'FAILED'
 
     # Print the result
-    puts "#{name}: #{result}"
+    puts "#{result}: #{name}"
 
     # Iterate the counters
     test_count+=1
