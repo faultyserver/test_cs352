@@ -1,0 +1,13 @@
+<script type="text/JavaScript">
+document.write()
+
+var info1 = "str"
+document.write(info1)
+
+var info2 = "hello,"
+var info3 = "world"
+document.write(info2, info3)
+
+
+document.write(info1, info2 + info3, 4 * 10 - 6)
+</script>
