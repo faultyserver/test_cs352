@@ -88,11 +88,17 @@ Dir.glob(TEST_DIR).each do |t|
     output = cerr.read
     failed = output != ''
 
-    # Write any output to the log
-    log.write("#{name}:\n#{output}\n\n") if failed
-
     # Determine whether or not it passed
     result = failed == should_fail ? 'passed' : 'FAILED'
+
+    # Write failures to the log
+    if failed != should_fail
+      if should_fail
+        log.write("Expected 'fail' for \"#{name}\" (got 'pass')")
+      else
+        log.write("Expected 'pass' for \"#{name}\" (got 'fail'): \n#{output}\n\n")
+      end
+    end
 
     # Print the result
     puts "#{result}: #{name}"
