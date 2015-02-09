@@ -34,7 +34,7 @@ TEST_DIR = './test/tests/*'
 
 # The name of the file to log test results in.
 # The file will be rewritten every time this tester is run.
-ERR_FILE = 'test_errors.log'
+ERR_FILE = 'test_failures.log'
 
 
 
