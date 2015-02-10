@@ -16,6 +16,13 @@ Requires [Ruby >= 1.8.7](https://www.ruby-lang.org/en/downloads/). Works on Mac 
   - Case tagging for faster development.
   - Assertion support for compiler validation.
   
+
+# Staying up to date
+If you choose to clone this repo (e.g., `git clone https://github.com...`), you can easily make sure that you have the most recent version of the test cases just by running `git pull`.
+
+The `master` branch is guaranteed to have the most recent, confirmed-valid test cases. Therefore, it can be trusted to always be inline with the official spec.
+
+Other branches may have more recent and expansive tests, but they are not guaranteed to be correct. If you would like to test with them, you can run `git checkout <the_branch>` to load them locally. All pull requests will be loaded to these branches first, then merged into master when they have been fully validated and confirmed.
   
 # Usage
 Make a new folder (generally called `test`) in your project folder, e.g.:
