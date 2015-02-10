@@ -1,0 +1,6 @@
+<script type="text/JavaScript">
+
+var info1 = "str"
+document.write(info1)
+
+</script>

@@ -1,0 +1,11 @@
+<script type="text/JavaScript">
+var one = 1; var two = 2
+var three = one + two
+
+var five = 3 * two - one
+five = 10 * one / two
+
+var seven = 6 * two - one * five
+
+var thirteen = (seven + three) * two - five - two
+</script>
