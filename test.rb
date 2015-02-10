@@ -47,6 +47,14 @@ ERR_FILE = 'test_failures.log'
 # Provides a way to read stdout and stderr.
 require 'open3'
 
+# Colorization
+class String
+  def colorize!(color_code); self.replace "\e[#{color_code}m#{self}\e[0m"; end
+  def red!; colorize!(31); end
+  def green!; colorize!(32); end
+  def yellow!; colorize!(33); end
+end
+
 # Initial notification
 version = 'CS 352 Project Test Script [v0.9] - Jon Egeland, 2015'
 puts version
@@ -101,7 +109,11 @@ Dir.glob(TEST_DIR).each do |t|
     end
 
     # Print the result
-    puts "#{result}: #{name}"
+    if result == 'passed'
+      puts "#{result}: #{name}".green!
+    else
+      puts "#{result}: #{name}".red!
+    end
 
     # Iterate the counters
     test_count+=1
@@ -113,8 +125,19 @@ end
 log.close
 
 
+ratio = pass_count / test_count
+passed_text = "#{pass_count}/#{test_count} tests passed."
+if ratio >= 1
+  passed_text.green!
+elsif ratio >= 0.8
+  passed_text.yellow!
+else
+  passed_text.red!
+end
+
+
 # Final notification
 puts "\n\nResults:"
 puts "--------"
-puts "#{pass_count}/#{test_count} tests passed."
+puts passed_text
 puts "Errors have been logged in: #{ERR_FILE}"

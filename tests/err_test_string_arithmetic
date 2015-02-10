@@ -1,5 +1,5 @@
 <script type="text/JavaScript">
-var bad = three + "3"
+var bad = three + "3";
 
-bad = "3" + three
+bad = "3" + three;
 </script>
