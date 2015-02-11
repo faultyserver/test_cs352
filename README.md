@@ -1,7 +1,7 @@
 # CS 352 Test Script
 A small(ish) test script for the compiler project in CS 352. Features include:
 
-  - Written in Ruby. ([Yes, thats a feature](http://yehudakatz.com/2009/08/24/my-10-favorite-things-about-the-ruby-language/))
+  - Written in Ruby. ([Yes, thats a feature](http://yehudakatz.com/2009/08/24/my-10-favorite-things-about-the-ruby-language/)) (Yes, there's a Python port.)
   - Named test cases.
   - Negated test cases.
   - Colorized output.
