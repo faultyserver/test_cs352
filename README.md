@@ -161,7 +161,7 @@ If you find an error in any of the test cases, create a new issue with the follo
 Please, do **not** use pull requests to change existing test cases.
 
 ## Test Script
-If you want to modify the test script, fork the repo, make your change, then make a pull request. Modifications will only be included if they *improve* the functionality or usability of the script. Styliztic changes are generally not accepted.
+If you want to modify the test script, fork the repo, make your change, then make a pull request. Modifications will only be included if they *improve* the functionality or usability of the script. Stylistic changes are generally not accepted.
 
 If you find an error in the test script, create an issue with the following:
   - The error that is occurring.
