@@ -125,7 +125,11 @@ end
 log.close
 
 
-ratio = pass_count / test_count
+if test_count > 0
+    ratio = pass_count / test_count
+else
+    ratio = 0
+end
 passed_text = "#{pass_count}/#{test_count} tests passed."
 if ratio >= 1
   passed_text.green!
