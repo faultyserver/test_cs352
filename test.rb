@@ -56,7 +56,7 @@ class String
 end
 
 # Initial notification
-version = 'CS 352 Project Test Script [v0.9] - Jon Egeland, 2015'
+version = 'CS 352 Project Test Script [Ruby v0.9] - Jon Egeland, 2015'
 puts version
 puts "\nSetup:"
 puts "------"
@@ -126,9 +126,9 @@ log.close
 
 
 if test_count > 0
-    ratio = pass_count / test_count
+  ratio = pass_count / test_count
 else
-    ratio = 0
+  ratio = 0
 end
 passed_text = "#{pass_count}/#{test_count} tests passed."
 if ratio >= 1
