@@ -1,13 +1,13 @@
 # CS 352 Test Script
 A small(ish) test script for the compiler project in CS 352. Features include:
 
-  - Written in Ruby. ([Yes, thats a feature](http://yehudakatz.com/2009/08/24/my-10-favorite-things-about-the-ruby-language/)) (Yes, there's a Python port.)
+  - Written in Ruby. ([Yes, that's a feature](http://yehudakatz.com/2009/08/24/my-10-favorite-things-about-the-ruby-language/)) (Yes, there's a Python port)
   - Named test cases.
   - Negated test cases.
   - Colorized output.
   - Failure log to help with debugging.
 
-Requires [Ruby >= 1.8.7](https://www.ruby-lang.org/en/downloads/). Works on Mac and Linux. Works on Windows with `make` installed and support for ANSI codes.
+Requires [Ruby >= 1.8.7](https://www.ruby-lang.org/en/downloads/). Works on Mac and Linux. Works on Windows with `make` installed and support for ANSI codes ([ansi.sys](http://support.microsoft.com/kb/101875)).
 
 ##### Planned for v1.0:
 
@@ -52,7 +52,8 @@ Configure `test.rb` to fit your project. The configuration options are at the to
 Run the testing script from the root of your project directory with
 
 ``` shell
-$ ruby ./test/test.rb
+$ ruby ./test/test.rb     # To use Ruby, or
+$ python ./test/test.py   # To use Python
 ```
 
 To make things even easier, you can add a `test` rule to your Makefile. The testing script already includes a call to `make`, so you something like the following should work:
@@ -62,17 +63,18 @@ To make things even easier, you can add a `test` rule to your Makefile. The test
 ...
 .PHONY: test
 test:
-  ruby ./test/test.rb
+  ruby ./test/test.rb     # To use Ruby, or
+  python ./test/test.py   # To use Python
 ```
 
 Notice that we also added a `.PHONY` rule. This tells make that it should always run the `test` rule, even if it has run it before.
 
-From there, calling `make test` should be enough to run the full set of tests. For example:
+From there, calling `make test` should be enough to run the full set of tests. For example (using the Ruby script):
 
 ``` shell
 $ make test
 ruby ./test/test.rb
-CS 352 Project Test Script [v0.9] - Jon Egeland, 2015
+CS 352 Project Test Script [Ruby v0.9] - Jon Egeland, 2015
 
 Setup:
 ------
@@ -116,6 +118,8 @@ Errors have been logged in: test_failures.log
 Test cases are kept in the `tests/` folder. Included are a number of test cases for various aspects of the project.
 
 Every file in the `tests/` folder will be run by the test script.
+
+Importantly, test cases are language-independent, meaning you only need to write one version of each test, and it will automatically be used between all versions of the test script.
 
 ## Named Tests
 The name of a test is given by the name of its file. By convention, files named with the prefix `test_` will have the prefix removed from their name.
