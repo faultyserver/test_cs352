@@ -60,9 +60,12 @@ To make things even easier, you can add a `test` rule to your Makefile. The test
 ``` make
 # Makefile
 ...
+.PHONY: test
 test:
   ruby ./test/test.rb
 ```
+
+Notice that we also added a `.PHONY` rule. This tells make that it should always run the `test` rule, even if it has run it before.
 
 From there, calling `make test` should be enough to run the full set of tests. For example:
 
