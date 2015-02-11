@@ -1,0 +1,4 @@
+<script type="text/JavaScript">
+var str = "this string
+has a new line";
+</script>
