@@ -7,7 +7,7 @@ A small(ish) test script for the compiler project in CS 352. Features include:
   - Colorized output.
   - Failure log to help with debugging.
 
-Requires [Ruby >= 1.8.7](https://www.ruby-lang.org/en/downloads/). Works on Mac and Linux. Works on Windows with `make` installed and support for ANSI codes ([ansi.sys](http://support.microsoft.com/kb/101875)).
+Requires [Ruby >= 1.8.7](https://www.ruby-lang.org/en/downloads/) or [Python >= 2.7.5](https://www.python.org/downloads/). Works on Mac and Linux. Works on Windows with `make` installed and support for ANSI codes ([ansi.sys](http://support.microsoft.com/kb/101875)).
 
 ##### Planned for v1.0:
 
