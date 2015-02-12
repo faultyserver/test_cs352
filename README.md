@@ -1,4 +1,4 @@
-# CS 352 Test Script
+# CS 352 Test Script v1.0
 A small(ish) test script for the compiler project in CS 352. Features include:
 
   - Written in Ruby. ([Yes, that's a feature](http://yehudakatz.com/2009/08/24/my-10-favorite-things-about-the-ruby-language/)) (Yes, there's a Python port)
@@ -15,7 +15,7 @@ Requires [Ruby >= 1.8.7](https://www.ruby-lang.org/en/downloads/) or [Python >= 
   - Better support for windows.
   - Case tagging for faster development.
   - Assertion support for compiler validation.
-  
+
 
 # Staying up to date
 If you choose to clone this repo (e.g., `git clone https://github.com...`), you can easily make sure that you have the most recent version of the test cases just by running `git pull`.
@@ -23,7 +23,7 @@ If you choose to clone this repo (e.g., `git clone https://github.com...`), you 
 The `master` branch is guaranteed to have the most recent, confirmed-valid test cases. Therefore, it can be trusted to always be inline with the official spec.
 
 Other branches may have more recent and expansive tests, but they are not guaranteed to be correct. If you would like to test with them, you can run `git checkout <the_branch>` to load them locally. All pull requests will be loaded to these branches first, then merged into master when they have been fully validated and confirmed.
-  
+
 # Usage
 Make a new folder (generally called `test`) in your project folder, e.g.:
 
@@ -34,7 +34,7 @@ Make a new folder (generally called `test`) in your project folder, e.g.:
     |- test/
     |- Makefile
     |- ...
-    
+
 Copy this repo to that directory, such that you have the structure:
 
     project/
@@ -46,9 +46,9 @@ Copy this repo to that directory, such that you have the structure:
     |  |- test.rb
     |- Makefile
     |- ...
-    
+
 Configure `test.rb` to fit your project. The configuration options are at the top of the file, and each option has a description of what it controls as a comment.
-    
+
 Run the testing script from the root of your project directory with
 
 ``` shell
@@ -135,8 +135,8 @@ These cases would be interpreted by the script as:
     something simple
     something more complicated
     a stupdily long test case name that should not really be used
-  
-  
+
+
 ## Negated tests
 Negated tests are tests that are expected to fail. Since the nature of testing a parser doesn't really allow for `assert` statements, we need another way to differentiate these cases from normal ones.
 
@@ -161,7 +161,7 @@ If you find an error in any of the test cases, create a new issue with the follo
   - The reason that the case is invalid. References to the official spec will help the issue get fixed faster.
   - (Optional) A fix for the test case. If you have a fix for the case, provide it. It is okay to create an issue without a solution. If the test case can not be fixed (i.e., the purpose of the case is invalid), say so in your issue.
   - Tag the issue with the `test_case` and `bug` labels.
-  
+
 Please, do **not** use pull requests to change existing test cases.
 
 ## Test Script
@@ -171,7 +171,7 @@ If you find an error in the test script, create an issue with the following:
   - The error that is occurring.
   - The lines of code where you think the error is occurring.
   - (Optional) A potential fix for the error. It is okay if you do not have one.
-  
+
 Please, do **not** use pull requests to fix bugs in the test script unless you reference an issue in your request.
 
 
