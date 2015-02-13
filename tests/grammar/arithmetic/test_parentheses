@@ -2,4 +2,5 @@
 
 var five = (((3 + 9) / (5 - 3) - 6) + ((7 - 4) * 3)) - 1
 
+document.write(five)
 </script>
