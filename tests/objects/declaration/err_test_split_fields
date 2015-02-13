@@ -1,0 +1,8 @@
+<script type="text/JavaScript">
+var person = {
+  first: "Abe",
+  last:
+    "Lincoln"
+
+};
+</script>

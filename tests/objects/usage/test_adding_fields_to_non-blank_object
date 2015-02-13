@@ -1,0 +1,9 @@
+<script type="text/JavaScript">
+var person = {
+  first: "Abe",
+  last: "Lincoln"
+}
+
+person.age = 150
+person.eyeColor = "blue" + "grey"
+</script>

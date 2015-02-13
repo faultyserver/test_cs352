@@ -1,3 +1,4 @@
 <script type="text/JavaScript">
-var three = 3;
+var person = {
+};
 </script>

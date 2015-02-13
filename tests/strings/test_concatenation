@@ -1,0 +1,8 @@
+<script type="text/JavaScript">
+var info1 = "Hello,"
+var info2 = " world!"
+
+var info3 = info1 + info2
+
+document.write(info1 + info2, info3)
+</script>

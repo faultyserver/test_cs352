@@ -1,0 +1,7 @@
+<script type="text/JavaScript">
+var person = { };
+
+person.first = "Abe" ; person.last = "Lincoln"
+person.age = 150
+person.eyeColor = "blue" + "grey"
+</script>

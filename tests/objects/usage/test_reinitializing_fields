@@ -1,0 +1,9 @@
+<script type="text/JavaScript">
+var person = {
+  first: "Abe"
+  last: "Lincoln"
+}
+
+person.first = "John"
+person.last  = "Smith"
+</script>
