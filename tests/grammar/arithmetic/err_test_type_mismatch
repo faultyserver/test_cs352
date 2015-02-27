@@ -1,5 +1,10 @@
-<script type="text/JavaScript">
-var bad = three + "3";
+input: |+
+  <script type="text/JavaScript">
+  var bad = three + "3";
 
-bad = "3" + three;
-</script>
+  bad = "3" + three;
+  </script>
+
+output: |+
+  Line 2, type violation
+  Line 4, type violation

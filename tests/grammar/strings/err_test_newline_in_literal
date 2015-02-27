@@ -1,4 +1,8 @@
-<script type="text/JavaScript">
-var str = "this string
-has a new line";
-</script>
+input: |+
+  <script type="text/JavaScript">
+  var str = "this string
+  has a new line";
+  </script>
+
+output: |+
+  syntax error

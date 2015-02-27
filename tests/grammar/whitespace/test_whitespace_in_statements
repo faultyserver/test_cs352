@@ -1,6 +1,9 @@
-<script type="text/JavaScript">
-var one   =  1
-var two   =  2
-var three =  3
-var ten   = 10
-</script>
+input: |+
+  <script type="text/JavaScript">
+  var one   =  1
+  var two   =  2
+  var three =  3
+  var ten   = 10
+  </script>
+
+output: ~

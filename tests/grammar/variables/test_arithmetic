@@ -1,11 +1,23 @@
-<script type="text/JavaScript">
-var one = 1; var two = 2
-var three = one + two
+input: |+
+  <script type="text/JavaScript">
+  var one = 1; var two = 2
+  var three = one + two
 
-var five = 3 * two - one
-five = 10 * one / two
+  var five = 3 * two - one
+  five = 10 * one / two
 
-var seven = 6 * two - one * five
+  var seven = 6 * two - one * five
 
-var thirteen = (seven + three) * two - five - two
-</script>
+  var thirteen = (seven + three) * two - five - two
+
+  document.write(three, "<br />")
+  document.write(five, "<br />")
+  document.write(seven, "<br />")
+  document.write(thirteen, "<br />")
+  </script>
+
+output: |+
+  3
+  5
+  7
+  13

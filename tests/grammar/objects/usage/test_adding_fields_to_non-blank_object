@@ -1,9 +1,15 @@
-<script type="text/JavaScript">
-var person = {
-  first: "Abe",
-  last: "Lincoln"
-}
+input: |+
+  <script type="text/JavaScript">
+  var person = {
+    first: "Abe",
+    last: "Lincoln"
+  }
 
-person.age = 150
-person.eyeColor = "blue" + "grey"
-</script>
+  person.age = 150
+  person.eyeColor = "blue" + "grey"
+
+  document.write(person.eyeColor)
+  </script>
+
+output: |+
+  bluegrey

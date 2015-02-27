@@ -1,6 +1,9 @@
-<script type="text/JavaScript">
-var one
-var three = 3
+input: |+
+  <script type="text/JavaScript">
+  var one
+  var three = 3
 
-var str = "somestr"
-</script>
+  var str = "somestr"
+  </script>
+
+output: ~

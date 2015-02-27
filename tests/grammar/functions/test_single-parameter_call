@@ -1,6 +1,10 @@
-<script type="text/JavaScript">
+input: |+
+  <script type="text/JavaScript">
 
-var info1 = "str"
-document.write(info1)
+  var info1 = "hi"
+  document.write(info1)
 
-</script>
+  </script>
+
+output: |+
+  hi

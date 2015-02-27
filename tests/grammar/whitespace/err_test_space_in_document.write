@@ -1,3 +1,7 @@
-<script type="text/JavaScript">
-document . write("something")
-</script>
+input: |+
+  <script type="text/JavaScript">
+  document . write("something")
+  </script>
+
+output: |+
+  syntax error

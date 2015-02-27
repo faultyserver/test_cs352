@@ -1,10 +1,16 @@
-<script type="text/JavaScript">
-var three = 10
-three = 3
+input: |+
+  <script type="text/JavaScript">
+  var three = 10
+  three = 3
 
-var four = 12; four = 4
+  var four = 12; four = 4
 
 
-var somestr = "str1"
-somestr = "str2"
-</script>
+  var somestr = "str1"
+  somestr = "str2"
+
+  document.write(four, somestr)
+  </script>
+
+output: |+
+  4str2

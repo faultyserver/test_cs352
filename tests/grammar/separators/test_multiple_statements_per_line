@@ -1,4 +1,8 @@
-<script type="text/JavaScript">
-var three = 3 ; var two = 2
-var four = 4; document.write("things");
-</script>
+input: |+
+  <script type="text/JavaScript">
+  var three = 3 ; var two = 2
+  var four = 4; document.write("things");
+  </script>
+
+output: |+
+  things

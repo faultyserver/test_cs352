@@ -1,6 +1,10 @@
-<script type="text/JavaScript">
+input: |+
+  <script type="text/JavaScript">
 
-var five = (((3 + 9) / (5 - 3) - 6) + ((7 - 4) * 3)) - 1
+  var eight = (((3 + 9) / (5 - 3) - 6) + ((7 - 4) * 3)) - 1
 
-document.write(five)
-</script>
+  document.write(eight)
+  </script>
+
+output: |+
+  8

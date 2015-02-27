@@ -1,4 +1,7 @@
-<script type="text/JavaScript">
+input: |+
+  <script type="text/JavaScript">
 
 
-</script>
+  </script>
+
+output: ~

@@ -1,1 +1,5 @@
-<script type="text/JavaScript">var three = 3;</script>
+input: |+
+  <script type="text/JavaScript">var three = 3;</script>
+
+output: |+
+  syntax error

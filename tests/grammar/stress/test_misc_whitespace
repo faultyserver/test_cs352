@@ -1,8 +1,12 @@
-<script type="text/JavaScript">
+input: |+
+  <script type="text/JavaScript">
 
-var     three		=3
+  var     three		=3
 
-document.write    (  three ,	5,"string"    )    ;
-var two = 2
+  document.write    (  three ,	5,"string"    )    ;
+  var two = 2
 
-</script>
+  </script>
+
+output: |+
+  35string

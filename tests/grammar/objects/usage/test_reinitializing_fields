@@ -1,9 +1,16 @@
-<script type="text/JavaScript">
-var person = {
-  first: "Abe"
-  last: "Lincoln"
-}
+input: |+
+  <script type="text/JavaScript">
+  var person = {
+    first: "Abe",
+    last: "Lincoln"
+  }
+  document.write(person.first, " ", person.last, "<br />")
 
-person.first = "John"
-person.last  = "Smith"
-</script>
+  person.first = "John"
+  person.last  = "Smith"
+  document.write(person.first, " ", person.last)
+  </script>
+
+output: |+
+  Abe Lincoln
+  John Smith

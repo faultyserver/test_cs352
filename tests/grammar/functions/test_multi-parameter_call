@@ -1,8 +1,12 @@
-<script type="text/JavaScript">
-var info2 = "hello,";
-var info3 = "world"
-document.write(info2, info3);
+input: |+
+  <script type="text/JavaScript">
+  var info2 = "hello, ";
+  var info3 = "world"
+  document.write(info2, info3, "<br />");
 
-document.write(info2, 4)
-document.write(4, info2, "string", info3)
-</script>
+  document.write(info2, "this is CS ", 352)
+  </script>
+
+output: |+
+  hello, world
+  hello, this is CS 352

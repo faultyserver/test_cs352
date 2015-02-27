@@ -1,1 +1,5 @@
-</script>
+input: |+
+  </script>
+
+output: |+
+  syntax error
