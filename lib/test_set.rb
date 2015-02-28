@@ -29,6 +29,18 @@ class TestSet
     @pass_count = 0
   end
 
+  # Recursively call `block` for every test case in the tree.
+  def each(&block)
+    @tests.each do |t|
+      case t
+      when TestCase
+        block.call t
+      when TestSet
+        t.each &block
+      end
+    end
+  end
+
   # Run all tests in this set, adding to `@pass_count` the number of
   # passed test cases that belong to this set. After all tests have been
   # run, `@pass_count` will contain the total number of test cases that

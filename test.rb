@@ -80,11 +80,18 @@ $log = File.open(ERR_FILE, 'w')
 
 # Create and run the test tree
 tests = TestSet.new(TESTER, TEST_DIR)
-tests.run
 
 puts "\n\nTests:"
 puts "------"
-tests.print
+
+passed = 0
+total = 0
+tests.each do |test|
+  passed += 1 if test.run
+  test.print
+
+  total += 1
+end
 
 # Close the log
 $log.close
@@ -92,15 +99,15 @@ $log.close
 
 
 # Determine the final results
-passed_text = "#{tests.pass_count}/#{tests.test_count} tests passed."
-# ratio = @test_count > 0 ? @pass_count.to_f / @test_count : 0
-# if ratio >= 1
-#   passed_text.green!
-# elsif ratio >= 0.8
-#   passed_text.yellow!
-# else
-#   passed_text.red!
-# end
+passed_text = "#{passed}/#{total} tests passed."
+ratio = total > 0 ? passed.to_f / total : 0
+if ratio >= 1
+  passed_text.green!
+elsif ratio >= 0.8
+  passed_text.yellow!
+else
+  passed_text.red!
+end
 
 
 # Final notification
