@@ -5,6 +5,6 @@ input: |+
 
   document.write(eight)
   </script>
-
 output: |+
   8
+comments: ~

@@ -15,9 +15,9 @@ input: |+
   document.write(seven, "<br />")
   document.write(thirteen, "<br />")
   </script>
-
 output: |+
   3
   5
   7
   13
+comments: ~

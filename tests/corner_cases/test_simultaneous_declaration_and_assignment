@@ -2,10 +2,8 @@ input: |+
   <script type="text/JavaScript">
     var x = x;
   </script>
-
 output: |+
 
   Line 2, type violation
-
 comments: |+
   From Piazza @136. Error is because of Piazza @154: the right-hand side gets evaluated before assigning the value to the left-hand side, thus a type violation is thrown for an undeclared variable.

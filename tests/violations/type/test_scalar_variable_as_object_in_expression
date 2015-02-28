@@ -4,7 +4,6 @@ input: |+
     var b = a.a;
     var b = a.a + a.b;
   </script>
-
 output: |+
 
   Line 3, type violation
@@ -12,6 +11,5 @@ output: |+
   Line 4, type violation
 
   Line 4, type violation
-
 comments: |+
   Piazza @119.

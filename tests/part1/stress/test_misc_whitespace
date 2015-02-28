@@ -7,6 +7,6 @@ input: |+
   var two = 2
 
   </script>
-
 output: |+
   35string
+comments: ~

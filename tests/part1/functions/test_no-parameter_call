@@ -2,5 +2,5 @@ input: |+
   <script type="text/JavaScript">
   document.write()
   </script>
-
 output: ~
+comments: ~

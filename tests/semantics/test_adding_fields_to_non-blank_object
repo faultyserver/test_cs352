@@ -10,6 +10,6 @@ input: |+
 
   document.write(person.eyeColor)
   </script>
-
 output: |+
   bluegrey
+comments: ~

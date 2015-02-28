@@ -2,6 +2,6 @@ input: |+
   <script type="text/JavaScript">
   document . write("something")
   </script>
-
 output: |+
   syntax error
+comments: ~

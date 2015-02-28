@@ -2,10 +2,8 @@ input: |+
   <script type="text/JavaScript">
     document.write("some text", "<br />", "some text");
   </script>
-
 output: |+
   some text
   some text
-
 comments: |+
   Piazza @158

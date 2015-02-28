@@ -2,6 +2,6 @@ input: |+
   <script type="text/JavaScript">
   var three = 3 var four = 4
   </script>
-
 output: |+
   syntax error
+comments: ~

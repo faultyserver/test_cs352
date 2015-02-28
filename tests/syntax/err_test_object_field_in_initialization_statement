@@ -3,9 +3,7 @@ input: |+
     var object = {};
     var object.age = 120 / 4;
   </script>
-
 output: |+
   syntax error
-
 comments: |+
   Piazza @148

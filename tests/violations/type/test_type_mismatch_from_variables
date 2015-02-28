@@ -3,7 +3,7 @@ input: |+
     var str = "str"; var num = 1;
     var result = str + num;
   </script>
-
 output: |+
 
   Line 3, type violation
+comments: ~

@@ -2,6 +2,6 @@ input: |+
   <script type="text/JavaScript">
   vart bad = 4
   </script>
-
 output: |+
   syntax error
+comments: ~

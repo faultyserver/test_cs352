@@ -15,6 +15,10 @@ class TestCase
     test_params = YAML.load_file @file
     @input    = test_params["input"]
     @expected = test_params["output"] || "" # If the output should be empty, ensure a string exists
+    # # Ignore blank lines
+    # @expected.gsub!(/^$\n/, '')
+    # # Ignore the last newline (inserted by |+ in YAML)
+    @expected.chomp!
   end
 
   # Run the test and store the result.
@@ -27,18 +31,24 @@ class TestCase
 
     # Run the test and capture all output along with the status code.
     @output, status = Open3.capture2e("#{@target} \"#{test_input.path}\"")
+    @output.chomp!
+    # @output.gsub! /^$\n/, ''
 
     # Delete the temporary file
     File.unlink(test_input.path)
 
-    # Determine if the test passed. `rstrip` is to remove the lines added by `|+` in the YAML
-    @result = @output.strip == @expected.strip
+    # Determine if the test passed.
+    @result = @output == @expected
 
     # Log any failures
     if @result == false
+      tabbed_expected = @expected.gsub("\n", "\n\t\t")
+      tabbed_got = @output.gsub("\n", "\n\t\t")
       $log.puts("\"#{@name}\" failed:\n")
-      $log.puts("Expected: \"#{@expected.strip}\"\n")
-      $log.puts("Got: \"#{@output.strip}\"\n\n\n")
+      $log.puts("\tTest location: #{@file}\n")
+      $log.puts("\tExpected:\n\t\t#{tabbed_expected}\n")
+      $log.puts("\tGot:\n\t\t#{tabbed_got}\n")
+      $log.puts("<end>\n\n")
     end
 
     @result

@@ -5,6 +5,6 @@ input: |+
         "John"
     };
   </script>
-
 output: |+
   syntax error
+comments: ~

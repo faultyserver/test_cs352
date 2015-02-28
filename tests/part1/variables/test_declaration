@@ -5,5 +5,5 @@ input: |+
 
   var str = "somestr"
   </script>
-
 output: ~
+comments: ~
