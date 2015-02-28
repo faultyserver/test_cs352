@@ -3,11 +3,8 @@ input: |+
     var a = 1;
     document.write(a.b);
   </script>
-
 output: |+
-
   Line 3, type violation
   undefined
-
 comments: |+
   Piazza @119. `document.write(a.b)` still prints `undefined` as the value is still passed to the function, even after a type violation.

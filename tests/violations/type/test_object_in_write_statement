@@ -3,11 +3,8 @@ input: |+
     var object = {};
     document.write(object);
   </script>
-
 output: |+
-
   Line 3, type violation
   undefined
-
 comments: |+
   Piazza @158

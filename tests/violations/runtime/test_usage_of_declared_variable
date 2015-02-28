@@ -3,9 +3,7 @@ input: |+
     var a;
     var x = a;
   </script>
-
 output: |+
-
   Line 3, a has no value
 
 comments: |+

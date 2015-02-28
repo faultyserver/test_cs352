@@ -5,6 +5,7 @@ input: |+
       last: "Smith"
     };
   </script>
-
 output: |+
   syntax error
+
+comments: ~

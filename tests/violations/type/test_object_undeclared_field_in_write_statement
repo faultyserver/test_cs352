@@ -3,8 +3,7 @@ input: |+
     var object = {};
     document.write(object.age);
   </script>
-
 output: |+
-
   Line 3, type violation
   undefined
+comments: ~

@@ -11,6 +11,6 @@ input: |+
 
   document.write(four, somestr)
   </script>
-
 output: |+
   4str2
+comments: ~

@@ -3,7 +3,6 @@ input: |+
     var object = {};
     object = {};
   </script>
-
 output: |+
   syntax error
 

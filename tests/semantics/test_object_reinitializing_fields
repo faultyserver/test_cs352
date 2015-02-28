@@ -10,7 +10,7 @@ input: |+
   person.last  = "Smith"
   document.write(person.first, " ", person.last)
   </script>
-
 output: |+
   Abe Lincoln
   John Smith
+comments: ~

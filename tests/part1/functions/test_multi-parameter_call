@@ -6,7 +6,7 @@ input: |+
 
   document.write(info2, "this is CS ", 352)
   </script>
-
 output: |+
   hello, world
   hello, this is CS 352
+comments: ~

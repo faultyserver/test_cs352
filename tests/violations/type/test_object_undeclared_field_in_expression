@@ -3,9 +3,7 @@ input: |+
     var object = {};
     var age = object.age + 10;
   </script>
-
 output: |+
-
   Line 3, type violation
 
 comments: |+

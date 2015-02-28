@@ -7,7 +7,7 @@ input: |+
 
   document.write(info1 + info2, "<br />", info3)
   </script>
-
 output: |+
   Hello, world!
   Hello, world!
+comments: ~

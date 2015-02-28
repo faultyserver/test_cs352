@@ -2,6 +2,7 @@ input: |+
   <script type="text/JavaScript">
   </script>
   var result = 3;
-
 output: |+
   syntax error
+
+comments: ~

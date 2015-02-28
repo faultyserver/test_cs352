@@ -1,9 +1,11 @@
 # Part 2 Note:
-I had to make some changes to the script to accomodate some nuances in the spec. The test cases now assume that you are printing violations with a newline `\n` BOTH before AND after the actual violation. For example,
+The test cases assume that you are printing violations on their own lines, with no padding lines around them. For example,
 
     Line 3, type violation
-    
+    undefined
     Line 4, type violation
+    Line 4, type violation
+    undefinedundefined
     
 Make sure you are following this rule before using this test script. Note that this rule is accepted by the instructors as a valid way to delimit violations.
 

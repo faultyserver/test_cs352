@@ -2,6 +2,7 @@ input: |+
   <script type="text/JavaScript">
   2 * 4;
   </script>
-
 output: |+
   syntax error
+
+comments: ~

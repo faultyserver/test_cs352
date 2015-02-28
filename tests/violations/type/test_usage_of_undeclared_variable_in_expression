@@ -2,9 +2,7 @@ input: |+
   <script type="text/JavaScript">
     var result = y + "str";
   </script>
-
 output: |+
-
   Line 2, type violation
 
 comments: |+

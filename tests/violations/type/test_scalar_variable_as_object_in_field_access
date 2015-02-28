@@ -3,9 +3,7 @@ input: |+
     var a = 1;
     a.b = 1;
   </script>
-
 output: |+
-
   Line 3, type violation
 
 comments: |+

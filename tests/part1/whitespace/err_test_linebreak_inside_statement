@@ -3,6 +3,7 @@ input: |+
   var three =
   3;
   </script>
-
 output: |+
   syntax error
+
+comments: ~

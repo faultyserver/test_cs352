@@ -5,6 +5,6 @@ input: |+
   document.write(info1)
 
   </script>
-
 output: |+
   hi
+comments: ~
