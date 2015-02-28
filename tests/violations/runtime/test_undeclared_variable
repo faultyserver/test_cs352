@@ -1,0 +1,7 @@
+input: |+
+  <script type="text/JavaScript">
+    var b = a;
+  </script>
+
+output: |+
+  Line 2, a has no value

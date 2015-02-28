@@ -1,10 +1,7 @@
 input: |+
   <script type="text/JavaScript">
-  var bad = 3 + "3";
-
-  bad = "3" + 3;
+    var bad = "string" + 3
   </script>
 
 output: |+
   Line 2, type violation
-  Line 4, type violation

@@ -1,0 +1,9 @@
+input: |+
+  <script type="text/JavaScript">
+    var obj = {
+      first: "string" + 3
+    };
+  </script>
+
+output: |+
+  Line 3, type violation

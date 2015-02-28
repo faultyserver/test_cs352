@@ -1,10 +1,9 @@
 input: |+
   <script type="text/JavaScript">
-  var bad = 3 + "3";
+    var int = 3; var str = "string";
 
-  bad = "3" + 3;
+    var bad = str + int
   </script>
 
 output: |+
-  Line 2, type violation
   Line 4, type violation
