@@ -5,6 +5,6 @@ input: |+
     };
   </script>
 output: |+
-
   Line 3, type violation
+
 comments: ~

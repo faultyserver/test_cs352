@@ -3,7 +3,7 @@ input: |+
     var result = y + "str";
   </script>
 output: |+
-
   Line 2, type violation
+
 comments: |+
   Piazza @154. `y` was not declared, so a type violation occurs.

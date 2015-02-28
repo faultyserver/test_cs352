@@ -3,6 +3,6 @@ input: |+
     var result = "str" / "str";
   </script>
 output: |+
-
   Line 2, type violation
+
 comments: ~

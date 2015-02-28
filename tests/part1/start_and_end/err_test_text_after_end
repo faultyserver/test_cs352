@@ -4,4 +4,5 @@ input: |+
   var result = 3;
 output: |+
   syntax error
+
 comments: ~

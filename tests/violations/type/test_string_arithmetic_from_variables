@@ -5,6 +5,6 @@ input: |+
     var result = first - last;
   </script>
 output: |+
-
   Line 4, type violation
+
 comments: ~

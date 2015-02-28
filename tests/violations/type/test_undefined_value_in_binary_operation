@@ -4,7 +4,6 @@ input: |+
     document.write(x + "str");
   </script>
 output: |+
-
   Line 2, type violation
   undefined
 comments: |+

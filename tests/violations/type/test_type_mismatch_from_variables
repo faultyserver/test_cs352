@@ -4,6 +4,6 @@ input: |+
     var result = str + num;
   </script>
 output: |+
-
   Line 3, type violation
+
 comments: ~

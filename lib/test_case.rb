@@ -15,8 +15,6 @@ class TestCase
     test_params = YAML.load_file @file
     @input    = test_params["input"]
     @expected = test_params["output"] || "" # If the output should be empty, ensure a string exists
-    # # Ignore blank lines
-    # @expected.gsub!(/^$\n/, '')
     # # Ignore the last newline (inserted by |+ in YAML)
     @expected.chomp!
   end
@@ -31,8 +29,6 @@ class TestCase
 
     # Run the test and capture all output along with the status code.
     @output, status = Open3.capture2e("#{@target} \"#{test_input.path}\"")
-    @output.chomp!
-    # @output.gsub! /^$\n/, ''
 
     # Delete the temporary file
     File.unlink(test_input.path)

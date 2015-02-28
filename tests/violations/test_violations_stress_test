@@ -11,16 +11,13 @@ input: |+
     var y = x + "str" + object.name;
   </script>
 output: |+
-
   Line 3, type violation
   undefined
   Line 5, type violation
-
   Line 8, b has no value
-
+  Line 10, type violation
   Line 10, type violation
 
-  Line 10, type violation
 comments: |+
   Line 3 - Can't write objects directly.
   Line 5 - Can't access undeclared field of an object.
