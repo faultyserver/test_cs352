@@ -1,3 +1,12 @@
+# Part 2 Note:
+I had to make some changes to the script to accomodate some nuances in the spec. The test cases now assume that you are printing violations with a newline `\n` BOTH before AND after the actual violation. For example,
+
+    Line 3, type violation
+    
+    Line 4, type violation
+    
+Make sure you are following this rule before using this test script. Note that this rule is accepted by the instructors as a valid way to delimit violations.
+
 # CS 352 Test Script v1.0
 A small(ish) test script for the compiler project in CS 352. Features include:
 
