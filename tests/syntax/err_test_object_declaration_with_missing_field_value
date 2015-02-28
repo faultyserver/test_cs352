@@ -1,0 +1,13 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {
+      first:,
+      last: "Smith"
+    };
+  </script>
+
+output: |+
+  syntax error
+
+comments: |+
+  Piazza @129

@@ -1,0 +1,9 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {
+      name: "John " + "Smith",
+      age: (120 + 80) / 10
+    };
+  </script>
+
+output: ~

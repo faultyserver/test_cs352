@@ -1,0 +1,11 @@
+input: |+
+  <script type="text/JavaScript">
+    var result = "str" + 1 + 1;
+  </script>
+
+output: |+
+
+  Line 2, type violation
+
+comments: |+
+  The grammar should be left associative, meaning this test case evaluates `"str" + 1` first, which is a type violation.

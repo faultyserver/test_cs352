@@ -1,0 +1,11 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    object = {};
+  </script>
+
+output: |+
+  syntax error
+
+comments: |+
+  Piazza @137, @151

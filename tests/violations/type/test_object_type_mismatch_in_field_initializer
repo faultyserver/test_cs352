@@ -1,0 +1,10 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {
+      first: "str" + 1
+    };
+  </script>
+
+output: |+
+
+  Line 3, type violation

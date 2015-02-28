@@ -1,0 +1,10 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    document.write(object.age);
+  </script>
+
+output: |+
+
+  Line 3, type violation
+  undefined

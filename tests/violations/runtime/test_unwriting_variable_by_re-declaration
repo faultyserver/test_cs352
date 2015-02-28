@@ -1,0 +1,14 @@
+input: |+
+  <script type="text/JavaScript">
+    var a = 1;
+    var x = a;
+    var a;
+    x = a;
+  </script>
+
+output: |+
+
+  Line 5, a has no value
+
+comments: |+
+  Piazza @128. `x` should be `1` after line 3, but `<undefined>` after line 5.

@@ -1,9 +1,0 @@
-input: |+
-  <script type="text/JavaScript">
-    var obj = { };
-
-    var bad = obj.first + 1
-  </script>
-
-output: |+
-  Line 4, type violation

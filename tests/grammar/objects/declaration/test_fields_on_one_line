@@ -1,8 +1,0 @@
-input: |+
-  <script type="text/JavaScript">
-  var person = { first: "Abe", last: "Lincoln", age: 150, eyeColor: "blue"+"grey" }
-  document.write(person.first, " ", person.last)
-  </script>
-
-output: |+
-  Abe Lincoln

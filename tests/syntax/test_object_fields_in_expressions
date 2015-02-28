@@ -1,0 +1,7 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: "John ", last: "Smith" };
+    var full_name = object.first + object.last;
+  </script>
+
+output: ~

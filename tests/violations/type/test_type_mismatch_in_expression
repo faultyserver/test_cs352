@@ -1,0 +1,8 @@
+input: |+
+  <script type="text/JavaScript">
+    var result = "str" + 1;
+  </script>
+
+output: |+
+
+  Line 2, type violation

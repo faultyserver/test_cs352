@@ -31,14 +31,14 @@ class TestCase
     # Delete the temporary file
     File.unlink(test_input.path)
 
-    # Determine if the test passed
-    @result = @output.chomp == @expected.chomp
+    # Determine if the test passed. `rstrip` is to remove the lines added by `|+` in the YAML
+    @result = @output.strip == @expected.strip
 
     # Log any failures
     if @result == false
       $log.puts("\"#{@name}\" failed:\n")
-      $log.puts("Expected: \"#{@expected}\"\n")
-      $log.puts("Got: \"#{@output}\"\n\n\n")
+      $log.puts("Expected: \"#{@expected.strip}\"\n")
+      $log.puts("Got: \"#{@output.strip}\"\n\n\n")
     end
 
     @result

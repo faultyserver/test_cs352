@@ -1,0 +1,11 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = { name: "John" };
+    document.write(object.name);
+  </script>
+
+output: |+
+  John
+
+comments: |+
+  Piazza @136 (adapted)

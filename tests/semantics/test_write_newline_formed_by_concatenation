@@ -1,0 +1,13 @@
+input: |+
+  <script type="text/JavaScript">
+    var str1 = "<br";
+    var str2 = " />";
+    document.write("some text", str1 + str2, "some text");
+  </script>
+
+output: |+
+  some text
+  some text
+
+comments: |+
+  Piazza @158

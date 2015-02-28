@@ -1,7 +1,0 @@
-input: |+
-  <script type="text/JavaScript">
-    var bad = 3 + "string"
-  </script>
-
-output: |+
-  Line 2, type violation

@@ -1,0 +1,11 @@
+input: |+
+  <script type="text/JavaScript">
+    var x = a;
+  </script>
+
+output: |+
+
+  Line 2, type violation
+
+comments: |+
+  Piazza @154

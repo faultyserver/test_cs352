@@ -1,0 +1,12 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    var age = object.age;
+  </script>
+
+output: |+
+
+  Line 3, type violation
+
+comments: |+
+  Piazza @136

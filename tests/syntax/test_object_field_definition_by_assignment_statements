@@ -1,0 +1,8 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    object.age = 120 / 4;
+    object.name = "John " + "Smith";
+  </script>
+
+output: ~

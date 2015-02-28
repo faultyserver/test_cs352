@@ -1,0 +1,10 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {
+      first: "John"
+      last: "Smith"
+    };
+  </script>
+
+output: |+
+  syntax error

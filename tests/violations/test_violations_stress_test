@@ -1,0 +1,31 @@
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    document.write(object);
+
+    var age = object.age;
+
+    var b;
+    var a = b;
+    var x = 1;
+    var y = x + "str" + object.name;
+  </script>
+
+output: |+
+
+  Line 3, type violation
+  undefined
+  Line 5, type violation
+
+  Line 8, b has no value
+
+  Line 10, type violation
+
+  Line 10, type violation
+
+comments: |+
+  Line 3 - Can't write objects directly.
+  Line 5 - Can't access undeclared field of an object.
+  Line 8 - `b` was never given a value.
+  Line 10(a) - `x + "str"` is a type mismatch
+  Line 10(b) - `name` is not a declared field of `object`.
