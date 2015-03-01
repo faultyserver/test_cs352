@@ -41,7 +41,7 @@ class TestCase
       tabbed_expected = @expected.gsub("\n", "\n\t\t")
       tabbed_got = @output.gsub("\n", "\n\t\t")
       $log.puts("\"#{@name}\" failed:\n")
-      $log.puts("\tTest location: #{@file}\n")
+      $log.puts("\tLocation: #{@file}\n")
       $log.puts("\tExpected:\n\t\t#{tabbed_expected}\n")
       $log.puts("\tGot:\n\t\t#{tabbed_got}\n")
       $log.puts("<end>\n\n")

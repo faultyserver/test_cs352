@@ -1,0 +1,11 @@
+input: |+
+  <script type="text/JavaScript">
+    x = 1;
+    var b = x;
+  </script>
+output: |+
+  Line 2, type violation
+  Line 3, type violation
+
+comments: |+
+  Piazza @136. After the violating assignment in Line 2, `x` has still not been declared, so a type error occurs when it is referenced in Line 3.
