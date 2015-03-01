@@ -1,0 +1,20 @@
+input: |+
+  <script type="text/JavaScript">
+    foo = 8;
+    foo = bar;
+    foo = 8 + bar * 9;
+    foo = a * bar + foo - 9;
+  </script>
+output: |+
+  Line 2, type violation
+  Line 3, type violation
+  Line 3, type violation
+  Line 4, type violation
+  Line 4, type violation
+  Line 5, type violation
+  Line 5, type violation
+  Line 5, type violation
+  Line 5, type violation
+
+comments: |+
+  Taken from discussion on Piazza @165. Variables only count as declared if they appear in a `var <name> (= <expr>)?` statement. Expands on violations/type/undeclared/test_assignment_from_undeclared-but-assigned_variable
