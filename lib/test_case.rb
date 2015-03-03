@@ -2,7 +2,7 @@ require 'open3'
 require 'yaml'
 
 class TestCase
-  attr_accessor :target, :file, :name, :input, :expected, :output, :result
+  attr_accessor :target, :file, :name, :input, :expected, :output, :errors, :result
 
   def initialize target, file_name
     @target = target
@@ -28,7 +28,7 @@ class TestCase
     test_input.close
 
     # Run the test and capture all output along with the status code.
-    @output, status = Open3.capture2e("#{@target} \"#{test_input.path}\"")
+    @output, @errors, status = Open3.capture3("#{@target} \"#{test_input.path}\"")
 
     # Delete the temporary file
     File.unlink(test_input.path)
