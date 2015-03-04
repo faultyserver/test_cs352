@@ -34,4 +34,6 @@ In either case, reference the [Operators section]() for information on which tok
 ## 2.1.4 Other Characters
 Whitespace characters (spaces and tabs) are ignored by miniscript as insignificant, other than to separate otherwise ambiguous tokens. Past the lexical analyzer, they serve no purpose and can thus be discarded.
 
+Newline characters, colons, and semicolons (`\n`, `:`, `;`) all serve special purposes in the grammar of some statements, and thus need to be passed along for the grammar to handle.
+
 If any other tokens appear in a miniscript program, the lexical analyzer should reject it as unrecognized. How the parser behaves afterwards is *undefined behavior*. Most implementations choose to fail hard and stop execution upon seeing this.
