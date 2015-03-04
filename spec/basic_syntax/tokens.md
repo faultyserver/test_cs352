@@ -24,7 +24,7 @@ Along with the keyword token types defined above, miniscript understands three o
 
 **A note on the definition of `STRING`**: The given regex for a string literal matches a pair of double quotes with anything except for another double quote or a newline character between them. This works based off of the rule that strings CAN NOT contain a newline character, and the assumption that strings WILL NOT contain a double quote inside of them.
 
-See the [Data Types section on Strings]() for more information on these rules.
+See the [Data Types section on Strings](../data_types/strings.md#32-strings) for more information on these rules.
 
 ## 2.1.3 Operator Tokens
 The implementation is free to choose how to handle operator tokens. Many implementers like to define them as token types, and then use those types in their grammar for the language. Others like to include the literal characters themselves in the grammar. Both methodologies are valid, and the only realistic difference between them is personal preference.
