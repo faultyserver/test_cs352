@@ -7,11 +7,11 @@ The goal is to provide a single source for the entire spec of the project that i
 
 # Index
 
-  1. [Preface: Parts](parts/index.md)
-  2. [Errors](errors/index.md)
-  3. [Basic Syntax](basic_syntax/index.md)
-  4. [Variables](variables/index.md)
-  5. [Data Types](data_types/index.md)
+  1. [Introduction](intro/index.md)
+  2. [Basic Syntax](basic_syntax/index.md)
+  3. [Variables](variables/index.md)
+  4. [Data Types](data_types/index.md)
+  5. [Operators](operators/index.md)
   6. [Data Structures](data_structures/index.md)
-  7. [Operators](operators/index.md)
-  8. [Flow Control](flow_control/index.md)
+  7. [Flow Control](flow_control/index.md)
+  8. [Errors](errors/index.md)
