@@ -9,9 +9,9 @@ The goal is to provide a single source for the entire spec of the project that i
 
   1. [Introduction](intro/index.md)
   2. [Basic Syntax](basic_syntax/index.md)
-  3. [Variables](variables/index.md)
-  4. [Data Types](data_types/index.md)
-  5. [Operators](operators/index.md)
-  6. [Data Structures](data_structures/index.md)
+  3. [Data Types](data_types/index.md)
+  4. [Data Structures](data_structures/index.md)
+  5. [Variables](variables/index.md)
+  6. [Operators](operators/index.md)
   7. [Flow Control](flow_control/index.md)
   8. [Errors](errors/index.md)
