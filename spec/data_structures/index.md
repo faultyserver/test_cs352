@@ -11,6 +11,6 @@ Data structures are complex combinations of simple data types. In miniscript, th
   - [4.2 Arrays](arrays.md#42-arrays)
     - [4.2.1 Initialization](arrays.md#421-initialization)
     - [4.2.2 Access](arrays.md#422-access)
-    - [4.2.3 Appending Members](objects.md#423-appending-members)
+    - [4.2.3 Appending Members](arrays.md#423-appending-members)
     - [4.2.4 Copy Behavior](arrays.md#424-copy-behavior)
 
