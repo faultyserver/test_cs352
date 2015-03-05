@@ -45,9 +45,9 @@ Any deviation from the above rules MUST throw a syntax error. Further reference 
 ## 4.2.2 Access
 The production rule
 
-    ID '[' NUM ']'
+    ID '[' numeric_expression ']'
 
-specifies the access of a member from an array, where `ID` represents the name of the array, and `NUM` is an integer number representing the index of the member being accessed. Member access is a *normal expression operation*, meaning it can appear anywhere on the right-hand side of a statement.
+specifies the access of a member from an array, where `ID` represents the name of the array, and `numeric_expression` is any expression which evaluates to an integer representing the index of the member being accessed. Member access is a *normal expression operation*, meaning it can appear anywhere on the right-hand side of a statement.
 
 Arrays in miniscript are *0-based*, meaning the first member of the array is at position 0 and is accessed by `array[0]`. Similarly, the last member of the array has an index of the length of the array minus 1.
 
