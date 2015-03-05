@@ -16,4 +16,7 @@ This section also does NOT cover storing these data types. For that, see the [Va
     - [3.2.1 - String Literals](numbers.md#321-string-literals)
     - [3.2.2 - Limitations](numbers.md#322-limitations)
     - [3.2.3 - Representation](numbers.md#323-representation)
-  - [3.3 - Booleans](strings.md#33-booleans)
+  - [3.3 - Booleans](booleans.md#33-booleans)
+    - [3.3.1 - Boolean Literals](booleans.md#331-boolean-literals)
+    - [3.3.2 - Limitations](booleans.md#332-limitations)
+    - [3.3.3 - Representation](booleans.md#333-representation)
