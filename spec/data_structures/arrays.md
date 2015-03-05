@@ -58,9 +58,7 @@ For example, the following input represents the declaration of an array and the 
 
 Notice that the production rule does not allow recursion. This is in compliance with the constraint that miniscript arrays can not contain other structures, as discussed above.
 
-If a request is made to any index that is greater than or equal to the length of the array, a type violation MUST be thrown, and the value of the expression becomes <undefined>.
-
-If a request is made to any other index that has not been *explicitly* defined (either by the initialization or an assignment statement, shown below), no type violation is thrown, but the value is `<undefined>`.
+If a request is made to any other index that has not been *explicitly* defined (either by the initialization or an assignment statement, shown below), a value error MUST be thrown, and the value of the expression becomes `<undefined>`.
 
 ## 4.2.3 Appending Members
 Members can be appended to arrays after they have been initialized. For this section, assume the array `array` has been declared as:
