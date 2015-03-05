@@ -29,7 +29,7 @@ A full definition and explanation of the boolean type can be found in the [Boole
 
 
 ## New Operators
-All operators in miniscript perform the same semantic actions and follow the same precedence rules as in C (and JavaScript for that matter). That is, operators follow the precedence (from highest to lowest priority):
+All operators in miniscript perform the same semantic actions and follow the same precedence rules as in C (and JavaScript for that matter). That is, operators follow the precedence (from lowest to highest priority):
 
   1. Logical Or `||`
   2. Logical And `&&`
