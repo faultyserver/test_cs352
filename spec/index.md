@@ -37,6 +37,8 @@ The goal is to provide a single source for the entire spec of the project that i
   - [6 Operators](operators/index.md)
     - [6.1 Parenthetical](operators/index.md#61-parenthetical)
     - [6.2 Postfix](operators/index.md#62-postfix)
+      - [6.2.1 `.`](operators/index.md#621-)
+      - [6.2.2 `[]`](operators/index.md#622-)
     - [6.3 Negation](operators/index.md#63-negation)
     - [6.4 Multiplicative](operators/index.md#64-multiplicative)
     - [6.5 Additive](operators/index.md#65-additive)
