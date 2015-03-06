@@ -19,6 +19,8 @@ The current set of operators available in miniscript are:
 
 Note that the assignment operator, `=`, is not included here as miniscript treats assignment as a statement-level expression. Thus, it can not be used on the right-hand side of a statement, and is therefore not considered an operator.
 
+**Note:** Any expression with any operand value of `<undefined>` will cause the *entire* expression to become `<undefined>`. This carries up through complex expressions.
+
 ## 6.1 Parenthetical
 The parenthetical operator, `()`, indicates that the expression within it should be evaluated entirely before being used in part of any parent expression. That is, the entire order of operations is applied to the contained expression before its value is passed to the parent. It is used in the form
 
