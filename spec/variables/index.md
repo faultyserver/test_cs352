@@ -6,7 +6,7 @@ Variables are identified by the `ID` token as given in the [Basic Syntax section
 ## 5.1 Properties
 Variables have two boolean properties which affect their usage in different parts of an input.
 
-| Property |                         Meaning                          |
+| Property |                          Meaning                         |
 | -------- | -------------------------------------------------------- |
 | Declared | The variable has been properly initialized by the input. |
 | Written  | The variable has been *explicitly* given a value.        |
@@ -54,3 +54,10 @@ A variable is considered *written* only if it has been explicitly given a value 
   2. The variable was declared without an expression (the second form of declaration).
 
 If a variable is referenced before it has been written, the variable remains *unwritten* until either a declaration (with an expression) or an assignment statement targeting the variable has been made.
+
+## 5.6 Scope
+All variables in miniscript are considered to be in the "global scope". That is, once a variable is defined by the input, it is available to *all* future lines of input, even if it was declared inside of a block such as an `if` or `while` statement.
+
+This applies to re-declaration as well. For example, if a variable is first declared with a value outside of a loop, and is then re-declared inside of the loop without a value, the variable will be remain *unwritten* after the exiting the loop.
+
+This differs from most other languages (namely C) where variables defined inside of structures are not available outside of them.
