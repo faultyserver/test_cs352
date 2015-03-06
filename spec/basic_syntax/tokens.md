@@ -12,6 +12,10 @@ Miniscript only defines a small number of keyword tokens. These strings are rese
 | `kWRITE` | `document.write`                  | Tell the parser to print out the following expressions |
 | `kTRUE`  | `true`                            | Indicate a value that always evaluates to true         |
 | `kFALSE` | `false`                           | Indicate a value that always evaluates to false        |
+| `kIF`    | `if`                              | Indicate the beginning of an `if` statement            |
+| `kELSE`  | `else`                            | Indicate the beginning of an `else` statement          |
+| `kWHILE` | `while`                           | Indicate the beginning of a `while` loop               |
+| `kDO`    | `do`                              | Indicate the beginning of a `do ... while` loop        |
 
 ## 2.1.2 Constant Token Types
 Along with the keyword token types defined above, miniscript understands three other types of tokens. Again, the token names here are not required, but are simply chosen to improve readability.
