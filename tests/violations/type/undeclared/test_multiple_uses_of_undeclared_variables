@@ -5,7 +5,8 @@ input: |+
     foo = 8 + bar * 9;
     foo = a * bar + foo - 9;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 2, type violation
   Line 3, type violation
   Line 3, type violation

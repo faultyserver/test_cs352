@@ -3,8 +3,10 @@ input: |+
     var x = 1 + "str";
     document.write(x + "str");
   </script>
-output: |+
-  Line 2, type violation
+stdout: |+
   undefined
+stderr: |+
+  Line 2, type violation
+
 comments: |+
   Piazza @162. Expressions including at least one `<undefined>` value will result in `<undefined>`, but will NOT throw an error. The error here comes from the expression `1 + "str", not `x + "str"`.

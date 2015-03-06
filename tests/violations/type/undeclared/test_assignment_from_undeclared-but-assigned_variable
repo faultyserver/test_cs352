@@ -3,7 +3,8 @@ input: |+
     x = 1;
     var b = x;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 2, type violation
   Line 3, type violation
 

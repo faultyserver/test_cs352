@@ -4,5 +4,6 @@ input: |+
       first: "John"
     };
   </script>
-output: ~
+stdout: ~
+stderr: ~
 comments: ~

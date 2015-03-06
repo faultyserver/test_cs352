@@ -5,6 +5,7 @@ input: |+
   document.write(info1)
 
   </script>
-output: |+
+stdout: |+
   hi
+stderr: ~
 comments: ~

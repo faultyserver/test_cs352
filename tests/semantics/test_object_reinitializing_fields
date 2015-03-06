@@ -10,7 +10,8 @@ input: |+
   person.last  = "Smith"
   document.write(person.first, " ", person.last)
   </script>
-output: |+
+stdout: |+
   Abe Lincoln
   John Smith
+stderr: ~
 comments: ~

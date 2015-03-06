@@ -3,7 +3,8 @@ input: |+
     var object = {
     };
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

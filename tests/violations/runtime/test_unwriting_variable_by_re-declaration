@@ -5,7 +5,8 @@ input: |+
     var a;
     x = a;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 5, a has no value
 
 comments: |+

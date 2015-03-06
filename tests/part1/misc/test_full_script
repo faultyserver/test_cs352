@@ -21,9 +21,10 @@ input: |+
   document.write(ID)
 
   </script>
-output: |+
+stdout: |+
   two plus ten = 12
   ten * ten = 100
   ten / two = 5
   5
+stderr: ~
 comments: ~

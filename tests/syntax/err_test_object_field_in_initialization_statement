@@ -3,7 +3,8 @@ input: |+
     var object = {};
     var object.age = 120 / 4;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: |+

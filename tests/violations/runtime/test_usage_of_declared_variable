@@ -3,7 +3,8 @@ input: |+
     var a;
     var x = a;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 3, a has no value
 
 comments: |+

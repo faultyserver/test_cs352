@@ -13,10 +13,13 @@ class TestCase
 
     # Read in the test case
     test_params = YAML.load_file @file
-    @input    = test_params["input"]
-    @expected = test_params["output"] || "" # If the output should be empty, ensure a string exists
-    # # Ignore the last newline (inserted by |+ in YAML)
-    @expected.chomp!
+    @input  = test_params["input"]
+    @stdout = test_params["stdout"] || "" # If stdout should be empty, ensure a string exists
+    @stderr = test_params["stderr"] || "" # If stderr should be empty, ensure a string exists
+
+    # Ignore the last newline (inserted by |+ in YAML)
+    @stdout.chomp!
+    @stderr.chomp!
   end
 
   # Run the test and store the result.
@@ -33,17 +36,23 @@ class TestCase
     # Delete the temporary file
     File.unlink(test_input.path)
 
-    # Determine if the test passed.
-    @result = @output == @expected
+    # Determine if the test passed. Both outputs must match exactly
+    @result = @output == @stdout && @errors == @stderr
 
     # Log any failures
     if @result == false
-      tabbed_expected = @expected.gsub("\n", "\n\t\t")
-      tabbed_got = @output.gsub("\n", "\n\t\t")
+      tabbed_exp_stdout = @stdout.gsub("\n", "\n\t\t\t")
+      tabbed_exp_stderr = @stderr.gsub("\n", "\n\t\t\t")
+      tabbed_got_stdout = @output.gsub("\n", "\n\t\t\t")
+      tabbed_got_stderr = @errors.gsub("\n", "\n\t\t\t")
       $log.puts("\"#{@name}\" failed:\n")
       $log.puts("\tLocation: #{@file}\n")
-      $log.puts("\tExpected:\n\t\t#{tabbed_expected}\n")
-      $log.puts("\tGot:\n\t\t#{tabbed_got}\n")
+      $log.puts("\tExpected:\n")
+      $log.puts("\t\tstdout:\n\t\t\t#{tabbed_exp_stdout}")
+      $log.puts("\t\tstderr:\n\t\t\t#{tabbed_exp_stderr}")
+      $log.puts("\tGot:\n")
+      $log.puts("\t\tstdout:\n\t\t\t#{tabbed_got_stdout}")
+      $log.puts("\t\tstderr:\n\t\t\t#{tabbed_got_stderr}")
       $log.puts("<end>\n\n")
     end
 

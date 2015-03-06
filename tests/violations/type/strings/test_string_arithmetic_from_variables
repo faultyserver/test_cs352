@@ -4,7 +4,8 @@ input: |+
     var result = first + last;
     var result = first - last;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 4, type violation
 
 comments: ~

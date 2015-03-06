@@ -3,7 +3,8 @@ input: |+
     var object = {};
     var age = object.age;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 3, type violation
 
 comments: |+

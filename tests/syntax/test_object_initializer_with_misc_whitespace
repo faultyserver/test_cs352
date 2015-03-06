@@ -11,6 +11,7 @@ input: |+
 
   document.write(person.first, " ", person.last)
   </script>
-output: |+
+stdout: |+
   Abe Lincoln
+stderr: ~
 comments: ~

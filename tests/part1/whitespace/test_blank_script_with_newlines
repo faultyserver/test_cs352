@@ -3,5 +3,6 @@ input: |+
 
 
   </script>
-output: ~
+stdout: ~
+stderr: ~
 comments: ~

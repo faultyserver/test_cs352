@@ -3,7 +3,8 @@ input: |+
   var str = "this string
   has a new line";
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

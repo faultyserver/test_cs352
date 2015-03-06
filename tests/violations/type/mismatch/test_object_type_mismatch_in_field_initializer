@@ -4,7 +4,8 @@ input: |+
       first: "str" + 1
     };
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 3, type violation
 
 comments: ~

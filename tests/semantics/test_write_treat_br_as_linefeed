@@ -2,8 +2,9 @@ input: |+
   <script type="text/JavaScript">
     document.write("some text", "<br />", "some text");
   </script>
-output: |+
+stdout: |+
   some text
   some text
+stderr: ~
 comments: |+
   Piazza @158

@@ -5,7 +5,8 @@ input: |+
         "John"
     };
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

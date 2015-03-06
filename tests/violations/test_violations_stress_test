@@ -10,9 +10,10 @@ input: |+
     var x = 1;
     var y = x + "str" + object.name;
   </script>
-output: |+
-  Line 3, type violation
+stdout: |+
   undefined
+stderr: |+
+  Line 3, type violation
   Line 5, type violation
   Line 8, b has no value
   Line 10, type violation

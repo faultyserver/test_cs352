@@ -2,7 +2,8 @@ input: |+
   <script type="text/JavaScript">
   document . write("something")
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~
