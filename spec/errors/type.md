@@ -30,15 +30,25 @@ Type violations MUST be printed with the format
 
 ```
 Line <x>, type violation
+
 ```
 
 where `<x>` is the line number of the start of the *expression* which contains the violation. Even if a statement spans multiple lines, the given line number MUST match the lowest-level expression which contains the violation.
 
+Notice that there is a newline at the end of the output.
+
 For example, the input
 
     <script type="text/JavaScript">
+    var a = 1 + "string"
     </script>
 
+would report the type violation for `1 + "string"` as
+
+```
+Line 2, type violation
+
+```
 
 ## 8.2.3 Special Cases
 Type violations do not have any special cases. However, they are relatively general and can be caused by a wide variety of inputs.
