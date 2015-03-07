@@ -43,7 +43,7 @@ A variable is considered *declared* only if it has been explicitly used in a dec
 
 If a variable is referenced before it has been declared, the variable remains *undeclared* until a declaration statement targeting the variable has been made.
 
-Assignment statements do **not** declare variables. Any undeclared variable targeted by an assignment statement will remain *undeclared*.
+Assignment statements targeting undeclared variables cause the variable to become *declared*.
 
 ## 5.5 Written vs. Unwritten
 A variable is considered *written* only if it has been explicitly given a value either through a declaration statement (with an expression) or an assignment statement. Even if the value of the variable is `<undefined>`, the variable is still considered to be *written*.
