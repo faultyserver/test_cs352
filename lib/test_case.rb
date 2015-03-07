@@ -2,7 +2,8 @@ require 'open3'
 require 'yaml'
 
 class TestCase
-  attr_accessor :target, :file, :name, :input, :expected, :output, :errors, :result
+  attr_accessor :target, :file, :name, :input, :tags, :comments,
+                :expected_out, :expected_err, :output, :errors, :result
 
   def initialize target, file_name
     @target = target
@@ -12,14 +13,15 @@ class TestCase
     @name = @file.split('/')[-1].sub(/^(err_)*test_/, '').tr('_', ' ')
 
     # Read in the test case
-    test_params = YAML.load_file @file
-    @input  = test_params["input"]
-    @stdout = test_params["stdout"] || "" # If stdout should be empty, ensure a string exists
-    @stderr = test_params["stderr"] || "" # If stderr should be empty, ensure a string exists
+    test_params   = YAML.load_file @file
+    @tags         = test_params["tags"]   || []
+    @input        = test_params["input"]
+    @expected_out = test_params["stdout"] || "" # If stdout should be empty, ensure a string exists
+    @expected_err = test_params["stderr"] || "" # If stderr should be empty, ensure a string exists
 
     # Ignore the last newline (inserted by |+ in YAML)
-    @stdout.chomp!
-    @stderr.chomp!
+    @expected_out.chomp!
+    @expected_err.chomp!
   end
 
   # Run the test and store the result.
@@ -37,12 +39,12 @@ class TestCase
     File.unlink(test_input.path)
 
     # Determine if the test passed. Both outputs must match exactly
-    @result = @output == @stdout && @errors == @stderr
+    @result = @output == @expected_out && @errors == @expected_err
 
     # Log any failures
     if @result == false
-      tabbed_exp_stdout = @stdout.gsub("\n", "\n\t\t\t")
-      tabbed_exp_stderr = @stderr.gsub("\n", "\n\t\t\t")
+      tabbed_exp_stdout = @expected_out.gsub("\n", "\n\t\t\t")
+      tabbed_exp_stderr = @expected_err.gsub("\n", "\n\t\t\t")
       tabbed_got_stdout = @output.gsub("\n", "\n\t\t\t")
       tabbed_got_stderr = @errors.gsub("\n", "\n\t\t\t")
       $log.puts("\"#{@name}\" failed:\n")

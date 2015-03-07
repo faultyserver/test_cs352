@@ -6,58 +6,54 @@
 # This script runs a set of tests, passing them if they're output matches what is expected. Tests
 # are defined in a YAML format, with the keys:
 #   - input: A string representing the EXACT input that will be passed to the parser.
-#   - output: A string representing the EXACT output should be expected from the parser.
-#
-# A NOTE ON OUTPUT: Leading and trailing whitespaces will be chomped (removed) before the values are
-# compared. This allows for a looser definition both in the test definitions and in the parser itself.
-# Take a look at the existing test cases for examples.
-#
+#   - stdout: A string representing the EXACT output to STDOUT should be expected from the parser.
+#   - stderr: A string representing the EXACT output to STDERR should be expected from the parser.
 #
 # Any files in the directory specified by `TEST_DIR` will be used as test cases. Be sure to not have
 # any miscellaneous files in there, or else the script will likely fail.
+#
+# Adding tags is a good way to make testing faster. See the existing test cases for examples.
 
-
-#####
-### CONFIGURATION ###
-#####
-
-# The name of the program to test with
-TESTER = './parser'
-
-# The location of the tests
-TEST_DIR = './test/tests'
-
-# The name of the file to log test results in
-# The file will be rewritten every time this tester is run
-ERR_FILE = 'test_failures.log'
-
-# The name of the file where the results display will be kept.
-# Access it at file://path/to/project/<RESULT_FILE>
-RESULT_FILE = 'results.html'
-
-
-
-
-#####
-### SOURCE
-#####
-
-# Provides a way to read stdout and stderr.
+here = File.dirname(__FILE__)
 require 'open3'
+require 'optparse'
 require 'yaml'
-require './test/lib/test_set.rb'
+require here + '/lib/test_lib.rb'
+
+# The default options for running the test script
+runtime_options = {
+  file: 'config.yaml',
+  config: 'default',
+  tags: []
+}
+
+# Allow overrides from the command line
+OptionParser.new do |opts|
+  opts.banner = "Usage: ruby test.rb [options]"
 
 
+  opts.on('-f [FILE]', '--file [FILE]', 'The location of a configuration file') do |file|
+    runtime_options[:file] = file
+  end
+  opts.on('-c [CONFIG]', '--config [CONFIG]', 'The name of the configuration to use') do |config|
+    runtime_options[:config] = config
+  end
 
-# Add colorization methods to String
-class String
-  def colorize!(color_code); self.replace "\e[#{color_code}m#{self}\e[0m"; end
-  def red!;    colorize!(31); end
-  def green!;  colorize!(32); end
-  def yellow!; colorize!(33); end
-  def blue!;   colorize!(36); end
-end
+  opts.on('-t [TAG]', '--tag [TAG]',
+            'The name of a tag to include in the test suite.',
+            'This will override the configuration file') do |tag|
+    runtime_options[:tags] << tag
+  end
+end.parse!
 
+config = YAML.load_file(here + '/' + runtime_options[:file])[runtime_options[:config]]
+TESTER      = config["parser"]
+TEST_DIR    = config["test_dir"]
+TAGS        = runtime_options[:tags].empty? ? config["tags"] : runtime_options[:tags]
+ERR_FILE    = config["error_log"]
+RESULT_FILE = config["results_page"]
+
+puts TAGS
 
 
 # Initial notification
@@ -79,7 +75,7 @@ puts "Test dir: #{TEST_DIR}"
 $log = File.open(ERR_FILE, 'w')
 
 # Create and run the test tree
-tests = TestSet.new(TESTER, TEST_DIR)
+tests = TestSet.new(TESTER, TEST_DIR, TAGS)
 
 puts "\n\nTests:"
 puts "------"

@@ -1,0 +1,7 @@
+# Initialize the default parameters in one place.
+default: &DEFAULT
+  parser:       ./parser
+  test_dir:     ./test/tests
+  tags:         ~
+  error_log:    ./test/test_failures.log
+  results_page: ./test/results.html
