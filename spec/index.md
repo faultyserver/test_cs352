@@ -4,6 +4,7 @@ This directory aims to serve as a more hierarchical version of the spec for the 
 
 The goal is to provide a single source for the entire spec of the project that is also more easy to read and reference so as to avoid any confusion, ambiguity, or concern about the priority of updates to the spec as the project goes on.
 
+This is **not** an official version of the spec. Any errors here can **not** be considered evidence of ambiguity or confusion, and the official spec should always be followed in the case of a conflict. That said, any error with document should be [reported as an issue](https://github.com/audiobahn404/test_cs352/issues/new) using the "spec" tag.
 
 # Index
 
