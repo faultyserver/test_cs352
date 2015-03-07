@@ -8,6 +8,7 @@ The goal is to provide a single source for the entire spec of the project that i
 # Index
 
   - [1 Introduction](intro/index.md)
+    - [1.3 Part 3](intro/part3.md)
   - [2 Basic Syntax](basic_syntax/index.md)
     - [2.1 - Tokens](basic_syntax/tokens.md#21-tokens)
       - [2.1.1 - Keyword Tokens](basic_syntax/tokens.md#211-keyword-tokens)
