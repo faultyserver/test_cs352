@@ -61,3 +61,14 @@ All variables in miniscript are considered to be in the "global scope". That is,
 This applies to re-declaration as well. For example, if a variable is first declared with a value outside of a loop, and is then re-declared inside of the loop without a value, the variable will be remain *unwritten* after the exiting the loop.
 
 This differs from most other languages (namely C) where variables defined inside of structures are not available outside of them.
+
+## 5.7 Type Conversion
+Miniscript does not allow for implicit type conversion, except to the boolean type, and only in the context of a boolean expression (the relational operators, as defined in [the Operators section](../operators/index.md#66-relational), or a conditional expression, as defined in [the Flow Control section](../flow_control/conditionals.md#7111-if)).
+
+In this specification, the phrase "evaluates to a boolean value" means any value which has a corresponding value. The following table gives the conditions for conversion to a boolean:
+
+|   Type  |    True   |    False     |
+| ------- | --------- | ------------ |
+| boolean | `true`    | `false`      |
+| number  | non-zero  | zero (`0`)   |
+| string  | non-empty | empty (`""`) |
