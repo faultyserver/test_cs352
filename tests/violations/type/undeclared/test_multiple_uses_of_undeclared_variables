@@ -9,15 +9,12 @@ input: |+
   </script>
 stdout: ~
 stderr: |+
-  Line 2, type violation
-  Line 3, type violation
-  Line 3, type violation
-  Line 4, type violation
-  Line 4, type violation
-  Line 5, type violation
-  Line 5, type violation
-  Line 5, type violation
-  Line 5, type violation
+  Line 2, foo undeclared
+  Line 3, bar has no value
+  Line 4, bar has no value
+  Line 5, a has no value
 
 comments: |+
-  Taken from discussion on Piazza @165. Variables only count as declared if they appear in a `var <name> (= <expr>)?` statement. Expands on violations/type/undeclared/test_assignment_from_undeclared-but-assigned_variable
+  Taken from discussion on Piazza @165. Variables only count as declared if they appear in a `var <name> (= <expr>)?` statement. Expands on violations/type/undeclared/test_assignment_from_undeclared-but-assigned_variable.
+
+  Added from part 3, only one error can be reported per statement. Logical and arithmetic statements are evaluated in a left-associative way, which implies the errors shown above.

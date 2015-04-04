@@ -8,6 +8,7 @@ input: |+
 stdout: |+
   undefined
 stderr: |+
-  Line 3, type violation
+  Line 3, object.age has no value
 
-comments: ~
+comments:
+  Changed in part 3 to a "has no value" error.

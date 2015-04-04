@@ -6,7 +6,7 @@ input: |+
   </script>
 stdout: ~
 stderr: |+
-  Line 2, type violation
+  Line 2, x undeclared
 
 comments: |+
-  Piazza @136
+  Piazza @136. Changed in part 3 to "undeclared" error.

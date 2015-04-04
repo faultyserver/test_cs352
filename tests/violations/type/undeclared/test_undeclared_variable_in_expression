@@ -6,7 +6,9 @@ input: |+
   </script>
 stdout: ~
 stderr: |+
-  Line 2, type violation
+  Line 2, y has no value
 
 comments: |+
   Piazza @154. `y` was not declared, so a type violation occurs.
+
+  Changed in part 3 to a "has no value" error.

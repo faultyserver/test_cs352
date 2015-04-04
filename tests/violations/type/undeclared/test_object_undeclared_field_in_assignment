@@ -7,7 +7,7 @@ input: |+
   </script>
 stdout: ~
 stderr: |+
-  Line 3, type violation
+  Line 3, object.age has no value
 
 comments: |+
-  Piazza @136
+  Piazza @136. Changed in part 3 to a "has no value" error.

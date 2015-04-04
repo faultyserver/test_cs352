@@ -7,8 +7,9 @@ input: |+
   </script>
 stdout: ~
 stderr: |+
-  Line 2, type violation
-  Line 3, type violation
+  Line 2, x undeclared
 
 comments: |+
   Piazza @136. After the violating assignment in Line 2, `x` has still not been declared, so a type error occurs when it is referenced in Line 3.
+
+  Changed in part 3 as assignment statements will implicitly declare previously undeclared variables.
