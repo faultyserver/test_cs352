@@ -1,0 +1,19 @@
+tags:
+  - do_while
+  - flow_control
+input: |+
+  <script type="text/JavaScript">
+    var a = 0;
+    do {
+      document.write(a);
+      if(a == 5) {
+        break;
+      }
+      a = a + 1;
+    }
+    while(a < 10);
+  </script>
+stdout: |+
+  012345
+stderr: ~
+comments: ~

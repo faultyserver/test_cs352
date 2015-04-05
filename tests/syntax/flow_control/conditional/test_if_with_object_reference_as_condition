@@ -1,0 +1,13 @@
+tags:
+  - conditional
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: "John" };
+    if(object.first) {
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

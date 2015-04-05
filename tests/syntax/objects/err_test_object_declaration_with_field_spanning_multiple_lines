@@ -1,0 +1,15 @@
+tags:
+  - objects
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = {
+      first:
+        "John"
+    };
+  </script>
+stdout: ~
+stderr: |+
+  syntax error
+
+comments: ~

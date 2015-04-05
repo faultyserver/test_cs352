@@ -1,0 +1,15 @@
+tags:
+  - do_while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { field: false };
+    do {
+
+    }
+    while(object.field);
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

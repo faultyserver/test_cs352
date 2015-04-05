@@ -1,0 +1,21 @@
+tags:
+  - operators
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: "" };
+    var array  = [ 0 ];
+    var a = !(1);
+    var b = !(1 + 2);
+    var c = !("string");
+    var d = !(true);
+    var e = !(object.first);
+    var f = !(array[0]);
+    var e = !d;
+  </script>
+stdout: ~
+stderr: ~
+comments: |+
+  The exclamation operator (representing negation) can only be used with an ID or a parenthetical expression. The expression will be converted to a boolean before the operation is applied.
+
+  By the spec, expressions such as `!1`, `!"some string"`, and `!false` are technically illegal. However, the TAs have said that these cases will not actually be tested, and a grammar that allows them will pass their tests. Because of this ambiguity, those cases are not tested here.

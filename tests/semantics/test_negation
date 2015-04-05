@@ -1,0 +1,28 @@
+tags:
+  - semantics
+input: |+
+  <script type="text/JavaScript">
+    var a = !(false);
+    document.write(a, "<br />");
+
+    var b = !("");
+    document.write(b, "<br />");
+
+    var c = !(1 + 1);
+    document.write(c, "<br />");
+
+    var d = !("" + "string");
+    document.write(d, "<br />");
+
+    var e = !d;
+    document.write(e, "<br />");
+  </script>
+stdout: |+
+  true
+  true
+  false
+  false
+  true
+
+stderr: ~
+comments: ~

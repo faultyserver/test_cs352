@@ -1,0 +1,14 @@
+tags:
+  - type_violation
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var array = [
+      "str" + 1
+    ];
+  </script>
+stdout: ~
+stderr: |+
+  Line 3, type violation
+
+comments: ~

@@ -1,0 +1,31 @@
+tags:
+  - conditional
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    if(true) {
+      var a = true;
+      if(a && 2 > 1) {
+        if(true) {
+
+        } else if(false) {
+
+        } else {
+
+        }
+      } else if(a) {
+        if(true) {
+
+        } else {
+
+        }
+      } else {
+      }
+
+      var b = "Hello, world";
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

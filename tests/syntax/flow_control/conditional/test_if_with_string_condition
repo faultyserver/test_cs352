@@ -1,0 +1,12 @@
+tags:
+  - conditional
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    if("hi") {
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

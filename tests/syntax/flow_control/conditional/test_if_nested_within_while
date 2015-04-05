@@ -1,0 +1,16 @@
+tags:
+  - conditional
+  - while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    while(0) {
+      if(true) {
+
+      }
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

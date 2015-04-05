@@ -1,0 +1,16 @@
+tags:
+  - type_violation
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a =  1;
+    var b = a.a;
+    var b = a.a + a.b;
+  </script>
+stdout: ~
+stderr: |+
+  Line 3, type violation
+  Line 4, type violation
+
+comments: |+
+  Piazza @119.

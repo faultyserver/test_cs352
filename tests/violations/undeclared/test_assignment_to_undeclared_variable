@@ -1,0 +1,13 @@
+tags:
+  - undeclared
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    x = 2;
+  </script>
+stdout: ~
+stderr: |+
+  Line 2, x undeclared
+
+comments: |+
+  Piazza @136. Changed in part 3 to "undeclared" error.

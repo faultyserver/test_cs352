@@ -1,0 +1,18 @@
+tags:
+  - condition_unknown
+  - conditional
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a = 1 + "str"
+    if(a) {
+
+    }
+  </script>
+stdout: ~
+stderr: |+
+  Line 2, type violation
+  Line 3, condition unknown
+
+comments: |+
+  Piazza @247. The only realistic way to encounter a "condition unknown" error is to have a previously defined variable with an undefined value as the condition.

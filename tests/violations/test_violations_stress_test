@@ -1,4 +1,6 @@
 tags:
+  - type_violation
+  - has_no_value
   - violations
 input: |+
   <script type="text/JavaScript">

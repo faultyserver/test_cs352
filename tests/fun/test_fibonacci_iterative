@@ -1,0 +1,24 @@
+tags:
+  - fun
+input: |+
+  <script type="text/JavaScript">
+    var current = 1;
+    var previous = 1;
+    var iterations = 2;
+
+    document.write(previous, " ", current);
+    while(iterations <= 10) {
+      var next = current + previous;
+      document.write(" ", next);
+      previous = current;
+      current = next;
+      iterations = iterations + 1;
+    }
+  </script>
+
+stdout: |+
+  1 1 2 3 5 8 13 21 34 55 89
+stderr: ~
+comments: ~
+
+

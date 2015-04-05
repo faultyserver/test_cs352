@@ -1,0 +1,13 @@
+tags:
+  - conditional
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var arr = [ 0 ];
+    if(arr[0]) {
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

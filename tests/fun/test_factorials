@@ -1,0 +1,28 @@
+tags:
+  - fun
+input: |+
+  <script type="text/JavaScript">
+    var num = 1;
+    var fact = [ 1 ];
+    while(num <= 5) {
+      fact[num] = fact[num-1] * num;
+      num = num + 1;
+    }
+    num = num - 1;
+    while(num >= 0) {
+      document.write(num, "! = ", fact[num], "<br />");
+      num = num - 1;
+    }
+  </script>
+stdout: |+
+  5! = 120
+  4! = 24
+  3! = 6
+  2! = 2
+  1! = 1
+  0! = 1
+
+stderr: ~
+comments: ~
+
+

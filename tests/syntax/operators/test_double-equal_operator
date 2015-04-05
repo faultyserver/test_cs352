@@ -1,0 +1,18 @@
+tags:
+  - operators
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: "", last: "" };
+    var array  = [ 0, 0 ];
+    var a = 1 == 1;
+    var b = "str" == "str";
+    var c = true == true;
+    var d = a == b;
+    var e = object.first == object.last;
+    var f = array[0] == array[1];
+  </script>
+stdout: ~
+stderr: ~
+comments: |+
+  The double-equal operator can be applied to any basic type, as long as both operands have the same type.

@@ -1,0 +1,14 @@
+tags:
+  - has_no_value
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    var age = object.age;
+  </script>
+stdout: ~
+stderr: |+
+  Line 3, object.age has no value
+
+comments: |+
+  Piazza @136. Changed in part 3 to a "has no value" error.

@@ -1,0 +1,20 @@
+tags:
+  - operators
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: "", last: "" };
+    var array  = [ 0, 0 ];
+    var a = 1 || 1;
+    var b = "str" || "str";
+    var c = "str" || 1;
+    var d = true || 1;
+    var e = false || true;
+    var f = d || e;
+    var g = object.first || object.last;
+    var h = array[0] || array[1];
+  </script>
+stdout: ~
+stderr: ~
+comments: |+
+  Strings and numbers can be converted to booleans in the context of a logical-or operation.

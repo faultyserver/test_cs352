@@ -1,0 +1,18 @@
+tags:
+  - conditional
+  - flow_control
+input: |+
+  <script type="text/JavaScript">
+    var a = 2;
+    if(a == 0) {
+      document.write("if");
+    } else if(a == 1) {
+      document.write("else if");
+    } else {
+      document.write("else");
+    }
+  </script>
+stdout: |+
+  else
+stderr: ~
+comments: ~

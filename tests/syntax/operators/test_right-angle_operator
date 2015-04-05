@@ -1,0 +1,22 @@
+tags:
+  - operators
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: 1 };
+    var array  = [ 1 ];
+    var number = 1;
+    var a = 1 > 1;
+    var b = number > 2;
+    var c = 2 > number;
+    var d = object.first > 1;
+    var e = 1 > object.first;
+    var f = object.first > object.first;
+    var g = array[0] > 1;
+    var h = 1 > array[0];
+    var i = array[0] > array[0];
+  </script>
+stdout: ~
+stderr: ~
+comments: |+
+  The right-angle operator can only be applied to numeric values. However, a non-numeric value is not a type violation, not a syntax error, so it is not tested here.
