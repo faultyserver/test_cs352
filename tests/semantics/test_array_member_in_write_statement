@@ -1,0 +1,11 @@
+tags:
+  - semantics
+input: |+
+  <script type="text/JavaScript">
+    var array = [ "John" ];
+    document.write(array[0]);
+  </script>
+stdout: |+
+  John
+stderr: ~
+comments: ~

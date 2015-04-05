@@ -1,0 +1,19 @@
+tags:
+  - semantics
+input: |+
+  <script type="text/JavaScript">
+  var person = [
+    "Abe",
+    "Lincoln"
+  ];
+  document.write(person[0], " ", person[1], "<br />")
+
+  person[0] = "John"
+  person[1] = "Smith"
+  document.write(person[0], " ", person[1])
+  </script>
+stdout: |+
+  Abe Lincoln
+  John Smith
+stderr: ~
+comments: ~

@@ -2,12 +2,12 @@ tags:
   - semantics
 input: |+
   <script type="text/JavaScript">
-  var person = { };
+  var person = [ ];
 
-  person.first = "Abe";
-  person.last = "Lincoln";
+  person[0] = "Abe";
+  person[1] = "Lincoln";
 
-  document.write(person.first, " ", person.last);
+  document.write(person[0], " ", person[1]);
   </script>
 stdout: |+
   Abe Lincoln

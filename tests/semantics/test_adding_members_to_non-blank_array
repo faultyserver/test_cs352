@@ -1,0 +1,18 @@
+tags:
+  - semantics
+input: |+
+  <script type="text/JavaScript">
+  var person = [
+    "Abe",
+    "Lincoln"
+  ];
+
+  person[2] = 150
+  person[3] = "blue" + "grey"
+
+  document.write(person[3])
+  </script>
+stdout: |+
+  bluegrey
+stderr: ~
+comments: ~

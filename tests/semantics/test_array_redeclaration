@@ -2,10 +2,9 @@ tags:
   - semantics
 input: |+
   <script type="text/JavaScript">
-    var object = {};
-    var object = {};
+    var array = [];
+    var array = [];
   </script>
 stdout: ~
 stderr: ~
-comments: |+
-  Piazza @128
+comments: ~
