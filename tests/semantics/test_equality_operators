@@ -1,0 +1,34 @@
+tags:
+  - semantics
+input: |+
+  <script type="text/JavaScript">
+    document.write(true  == true,  "<br />");
+    document.write(1     == 1,     "<br />");
+    document.write("str" == "str", "<br />");
+    document.write(true  == false, "<br />");
+    document.write(1     == 2,     "<br />");
+    document.write("str" == "STR", "<br />");
+
+    document.write(true  != true,  "<br />");
+    document.write(1     != 1,     "<br />");
+    document.write("str" != "str", "<br />");
+    document.write(true  != false, "<br />");
+    document.write(1     != 2,     "<br />");
+    document.write("str" != "STR", "<br />");
+  </script>
+stdout: |+
+  true
+  true
+  true
+  false
+  false
+  false
+  false
+  false
+  false
+  true
+  true
+  true
+
+stderr: ~
+comments: ~
