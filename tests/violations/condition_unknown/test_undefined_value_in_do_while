@@ -12,7 +12,7 @@ input: |+
 stdout: ~
 stderr: |+
   Line 2, type violation
-  Line 3, condition unknown
+  Line 5, condition unknown
 
 comments: |+
   Piazza @247. The only realistic way to encounter a "condition unknown" error is to have a previously defined variable with an undefined value as the condition.
