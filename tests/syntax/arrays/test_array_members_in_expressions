@@ -1,0 +1,11 @@
+tags:
+  - arrays
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var arr = [ "John", "Smith" ];
+    var full_name = arr[0] + arr[1];
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

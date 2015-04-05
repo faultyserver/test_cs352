@@ -1,8 +1,11 @@
+tags:
+  - syntax
 input: |+
   <script type="text/JavaScript">
   </script>
   var result = 3;
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

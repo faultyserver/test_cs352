@@ -1,0 +1,16 @@
+tags:
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a = 0;
+    while(a < 10) {
+      var b = 1 + "str";
+      a = a + 1;
+    }
+  </script>
+stdout: ~
+stderr: |+
+  Line 4, type violation
+
+comments: |+
+  Even though it is inside the loop, the error on line 4 should only be reported once, as defined by the spec.

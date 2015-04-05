@@ -1,0 +1,16 @@
+tags:
+  - do_while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    do {
+      var a = 1;
+      var b = 2;
+      var c = a + b;
+    }
+    while(false);
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

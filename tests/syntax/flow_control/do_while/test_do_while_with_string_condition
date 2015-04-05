@@ -1,0 +1,15 @@
+tags:
+  - do_while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    do {
+
+    }
+    while("");
+  </script>
+stdout: ~
+stderr: ~
+comments: |+
+  This test may result in an infinite loop if your conversion of string to boolean is incorrect.

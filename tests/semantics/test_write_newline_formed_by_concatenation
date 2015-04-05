@@ -4,8 +4,9 @@ input: |+
     var str2 = " />";
     document.write("some text", str1 + str2, "some text");
   </script>
-output: |+
+stdout: |+
   some text
   some text
+stderr: ~
 comments: |+
   Piazza @124

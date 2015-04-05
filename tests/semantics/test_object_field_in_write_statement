@@ -3,7 +3,8 @@ input: |+
     var object = { name: "John" };
     document.write(object.name);
   </script>
-output: |+
+stdout: |+
   John
+stderr: ~
 comments: |+
   Piazza @136 (adapted)

@@ -1,0 +1,22 @@
+tags:
+  - do_while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var a = 5;
+    do {
+      if(a > 10) {
+      } else if(false) {
+
+      } else {
+
+      }
+
+      a = a - 1;
+    }
+    while(a > 2);
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

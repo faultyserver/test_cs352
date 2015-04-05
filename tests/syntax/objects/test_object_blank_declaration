@@ -1,0 +1,10 @@
+tags:
+  - objects
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { };
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

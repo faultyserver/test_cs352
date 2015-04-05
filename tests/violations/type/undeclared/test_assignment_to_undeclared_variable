@@ -1,9 +1,0 @@
-input: |+
-  <script type="text/JavaScript">
-    x = 2;
-  </script>
-output: |+
-  Line 2, type violation
-
-comments: |+
-  Piazza @136

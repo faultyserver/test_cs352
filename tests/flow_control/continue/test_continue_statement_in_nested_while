@@ -1,0 +1,20 @@
+tags:
+  - while
+  - flow_control
+input: |+
+  <script type="text/JavaScript">
+    var a = 0;
+    while(a < 10) {
+      var b = 1;
+      while(b < 5) {
+        b = b + 1;
+        continue;
+        document.write(b, " ");
+      }
+
+      a = a + 1;
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

@@ -6,5 +6,6 @@ input: |+
 
 
 
-output: ~
+stdout: ~
+stderr: ~
 comments: ~

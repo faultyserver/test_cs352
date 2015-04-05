@@ -1,9 +1,0 @@
-input: |+
-  <script type="text/JavaScript">
-    var object = {
-    };
-  </script>
-output: |+
-  syntax error
-
-comments: ~

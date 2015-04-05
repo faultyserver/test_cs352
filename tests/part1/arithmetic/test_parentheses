@@ -5,6 +5,7 @@ input: |+
 
   document.write(eight)
   </script>
-output: |+
+stdout: |+
   8
+stderr: ~
 comments: ~

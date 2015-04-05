@@ -1,0 +1,16 @@
+tags:
+  - objects
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = {
+      first:,
+      last: "Smith"
+    };
+  </script>
+stdout: ~
+stderr: |+
+  syntax error
+
+comments: |+
+  Piazza @129

@@ -1,0 +1,15 @@
+tags:
+  - type_violation
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a = 1;
+    document.write(a[0]);
+  </script>
+stdout: |+
+  undefined
+stderr: |+
+  Line 3, type violation
+
+comments: |+
+  `document.write(a.b)` still prints `undefined` as the value is still passed to the function, even after a type violation.

@@ -1,10 +1,14 @@
+tags:
+  - type_violation
+  - violations
 input: |+
   <script type="text/JavaScript">
     var first = "John"; var last = "Smith";
     var result = first + last;
     var result = first - last;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 4, type violation
 
 comments: ~

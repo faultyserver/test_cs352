@@ -3,6 +3,7 @@ input: |+
     var object = {};
     var object = {};
   </script>
-output: ~
+stdout: ~
+stderr: ~
 comments: |+
   Piazza @128

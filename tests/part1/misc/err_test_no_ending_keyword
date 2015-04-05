@@ -1,6 +1,9 @@
+tags:
+  - syntax
 input: |+
   <script type="text/JavaScript">
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

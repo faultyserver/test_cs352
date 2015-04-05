@@ -1,0 +1,23 @@
+tags:
+  - operators
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = { first: 1, second: " " };
+    var array = [ 1, " " ];
+    var a = 1 + 1;
+    var b = object.first + 1;
+    var c = 1 + object.first;
+    var d = array[0] + 1;
+    var e = 1 + array[0];
+
+    var f = object.second + " ";
+    var g = " " + object.second;
+    var h = array[1] + " ";
+    var i = " " + array[1];
+  </script>
+stdout: ~
+stderr: ~
+comments: |+
+  The minus operator can only be applied to numeric and string values. However, a non-numeric value is not a type violation, not a syntax error, so it is not tested here.
+

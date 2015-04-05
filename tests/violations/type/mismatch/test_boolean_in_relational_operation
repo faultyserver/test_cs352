@@ -1,0 +1,12 @@
+tags:
+  - type_violation
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a = true < 1;
+  </script>
+stdout: ~
+stderr: |+
+  Line 2, type violation
+
+comments: ~

@@ -1,8 +1,12 @@
+tags:
+  - type_violation
+  - violations
 input: |+
   <script type="text/JavaScript">
     var result = "str" - "str";
   </script>
-output: |+
+stdout: ~
+stderr: |+
   Line 2, type violation
 
 comments: ~

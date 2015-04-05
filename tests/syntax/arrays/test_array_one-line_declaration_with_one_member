@@ -1,0 +1,10 @@
+tags:
+  - arrays
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var arr = [ "John Smith" ];
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

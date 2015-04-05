@@ -1,0 +1,12 @@
+tags:
+  - arrays
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var arr = [];
+    arr[0] = "John " + "Smith";
+    arr[1] = 120 / 4;
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

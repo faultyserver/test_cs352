@@ -1,0 +1,15 @@
+tags:
+  - type_violation
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a =  1;
+    var b = a[0];
+    var b = a[0] + a[1];
+  </script>
+stdout: ~
+stderr: |+
+  Line 3, type violation
+  Line 4, type violation
+
+comments: ~

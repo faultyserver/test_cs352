@@ -1,0 +1,17 @@
+tags:
+  - arrays
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+  var person = [
+    "Abe",    "Lincoln",
+    150,
+
+    "blue" + "grey"
+
+
+  ];
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

@@ -1,0 +1,14 @@
+tags:
+  - objects
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    object = {};
+  </script>
+stdout: ~
+stderr: |+
+  syntax error
+
+comments: |+
+  Piazza @137, @151

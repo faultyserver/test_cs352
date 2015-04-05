@@ -1,0 +1,13 @@
+tags:
+  - has_no_value
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var x = a;
+  </script>
+stdout: ~
+stderr: |+
+  Line 2, a has no value
+
+comments: |+
+  Piazza @154. Changed in part 3 to a "has no value" error

@@ -1,9 +1,12 @@
+tags:
+  - syntax
 input: |+
   <script type="text/JavaScript">
   var three =
   3;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

@@ -1,0 +1,14 @@
+tags:
+  - has_no_value
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var array = [];
+    document.write(array[0]);
+  </script>
+stdout: |+
+  undefined
+stderr: |+
+  Line 3, array[0] has no value
+
+comments: ~

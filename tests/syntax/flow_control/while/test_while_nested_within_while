@@ -1,0 +1,15 @@
+tags:
+  - while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    while(false) {
+      while(false) {
+        var a;
+      }
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

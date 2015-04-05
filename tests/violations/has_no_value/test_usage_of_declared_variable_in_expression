@@ -1,0 +1,13 @@
+tags:
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var a;
+    var x = a + 2;
+  </script>
+stdout: ~
+stderr: |+
+  Line 3, a has no value
+
+comments: |+
+  Piazza @128 discussion. `x` should be `<undefined>`

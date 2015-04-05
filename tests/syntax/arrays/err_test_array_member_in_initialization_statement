@@ -1,0 +1,13 @@
+tags:
+  - arrays
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var arr = [];
+    var arr[0] = 1;
+  </script>
+stdout: ~
+stderr: |+
+  syntax error
+
+comments: ~

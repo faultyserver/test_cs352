@@ -1,0 +1,14 @@
+tags:
+  - objects
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var object = {};
+    var object.age;
+  </script>
+stdout: ~
+stderr: |+
+  syntax error
+
+comments: |+
+  Piazza @148

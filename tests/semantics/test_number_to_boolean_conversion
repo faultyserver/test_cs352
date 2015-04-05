@@ -1,0 +1,14 @@
+tags:
+  - semantics
+input: |+
+  <script type="text/JavaScript">
+    var a = true && 1;
+    document.write(a);
+
+    var b = true && 0;
+    document.write(b);
+  </script>
+stdout: |+
+  truefalse
+stderr: ~
+comments: ~

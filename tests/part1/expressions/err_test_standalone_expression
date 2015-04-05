@@ -1,8 +1,11 @@
+tags:
+  - syntax
 input: |+
   <script type="text/JavaScript">
   2 * 4;
   </script>
-output: |+
+stdout: ~
+stderr: |+
   syntax error
 
 comments: ~

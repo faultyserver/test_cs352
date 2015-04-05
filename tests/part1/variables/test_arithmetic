@@ -15,10 +15,11 @@ input: |+
   document.write(seven, "<br />")
   document.write(thirteen, "<br />")
   </script>
-output: |+
+stdout: |+
   3
   5
   7
   13
 
+stderr: ~
 comments: ~

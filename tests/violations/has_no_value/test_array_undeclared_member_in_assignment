@@ -1,0 +1,13 @@
+tags:
+  - has_no_value
+  - violations
+input: |+
+  <script type="text/JavaScript">
+    var array = [];
+    var age = array[0];
+  </script>
+stdout: ~
+stderr: |+
+  Line 3, array[0] has no value
+
+comments: ~

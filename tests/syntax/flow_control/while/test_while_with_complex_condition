@@ -1,0 +1,13 @@
+tags:
+  - while
+  - flow_control
+  - syntax
+input: |+
+  <script type="text/JavaScript">
+    var a = false;
+    while(true && 1 + 4 < 2 * 2 || a == false) {
+    }
+  </script>
+stdout: ~
+stderr: ~
+comments: ~

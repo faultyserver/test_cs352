@@ -4,11 +4,12 @@ require './test/lib/test_case.rb'
 # of test cases. The result is a tree of test cases, with
 # this object being the root node.
 class TestSet
-  attr_accessor :target, :location, :tests, :test_count, :pass_count
+  attr_accessor :target, :location, :tests, :tags, :test_count, :pass_count
 
-  def initialize target, dir
+  def initialize target, dir, tags
     @target = target
     @location = dir
+    @tags = tags || []
 
     # Scan the directory for test cases/sets, add them to the list,
     # and recursively count the number of cases.
@@ -16,12 +17,17 @@ class TestSet
     @tests = []
     Dir.glob(@location+'/*').each do |t|
       if File.directory?(t)
-        set = TestSet.new(@target, t)
+        set = TestSet.new(@target, t, @tags)
         @test_count += set.test_count
         @tests << set
       else
-        @tests << TestCase.new(@target, t)
-        @test_count += 1
+        tc = TestCase.new(@target, t)
+        # If no tags were given, add the test case. If tags were
+        # given, make sure the test case has those tags.
+        if @tags.empty? || @tags.any? { |tag| tc.tags.include? tag }
+          @tests << tc
+          @test_count += 1
+        end
       end
     end
 

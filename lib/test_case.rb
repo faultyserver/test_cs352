@@ -2,7 +2,8 @@ require 'open3'
 require 'yaml'
 
 class TestCase
-  attr_accessor :target, :file, :name, :input, :expected, :output, :errors, :result
+  attr_accessor :target, :file, :name, :input, :tags, :comments,
+                :expected_out, :expected_err, :output, :errors, :result
 
   def initialize target, file_name
     @target = target
@@ -12,11 +13,15 @@ class TestCase
     @name = @file.split('/')[-1].sub(/^(err_)*test_/, '').tr('_', ' ')
 
     # Read in the test case
-    test_params = YAML.load_file @file
-    @input    = test_params["input"]
-    @expected = test_params["output"] || "" # If the output should be empty, ensure a string exists
-    # # Ignore the last newline (inserted by |+ in YAML)
-    @expected.chomp!
+    test_params   = YAML.load_file @file
+    @tags         = test_params["tags"]   || []
+    @input        = test_params["input"]
+    @expected_out = test_params["stdout"] || "" # If stdout should be empty, ensure a string exists
+    @expected_err = test_params["stderr"] || "" # If stderr should be empty, ensure a string exists
+
+    # Ignore the last newline (inserted by |+ in YAML)
+    @expected_out.chomp!
+    @expected_err.chomp!
   end
 
   # Run the test and store the result.
@@ -33,17 +38,23 @@ class TestCase
     # Delete the temporary file
     File.unlink(test_input.path)
 
-    # Determine if the test passed.
-    @result = @output == @expected
+    # Determine if the test passed. Both outputs must match exactly
+    @result = @output == @expected_out && @errors == @expected_err
 
     # Log any failures
     if @result == false
-      tabbed_expected = @expected.gsub("\n", "\n\t\t")
-      tabbed_got = @output.gsub("\n", "\n\t\t")
+      tabbed_exp_stdout = @expected_out.gsub("\n", "\n\t\t\t")
+      tabbed_exp_stderr = @expected_err.gsub("\n", "\n\t\t\t")
+      tabbed_got_stdout = @output.gsub("\n", "\n\t\t\t")
+      tabbed_got_stderr = @errors.gsub("\n", "\n\t\t\t")
       $log.puts("\"#{@name}\" failed:\n")
       $log.puts("\tLocation: #{@file}\n")
-      $log.puts("\tExpected:\n\t\t#{tabbed_expected}\n")
-      $log.puts("\tGot:\n\t\t#{tabbed_got}\n")
+      $log.puts("\tExpected:\n")
+      $log.puts("\t\tstdout:\n\t\t\t#{tabbed_exp_stdout}")
+      $log.puts("\t\tstderr:\n\t\t\t#{tabbed_exp_stderr}")
+      $log.puts("\tGot:\n")
+      $log.puts("\t\tstdout:\n\t\t\t#{tabbed_got_stdout}")
+      $log.puts("\t\tstderr:\n\t\t\t#{tabbed_got_stderr}")
       $log.puts("<end>\n\n")
     end
 

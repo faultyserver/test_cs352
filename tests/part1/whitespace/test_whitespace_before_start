@@ -4,5 +4,6 @@ input: |+
 
   <script type="text/JavaScript">
   </script>
-output: ~
+stdout: ~
+stderr: ~
 comments: ~
